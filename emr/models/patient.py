@@ -8,21 +8,21 @@ from .ModelMixins import PatientMethods, NoteMethods, PatientUrlMixin
 class PatientManager(models.Manager):
 
     def current(self):
-        IDs = [p.pk for p in self.objects.all() if p.is_currently_admitted()]
-        return self.objects.filter(pk__in=IDs)
+        IDs = [p.pk for p in self.all() if p.is_currently_admitted()]
+        return self.filter(pk__in=IDs)
 
     def month_admissions(self):
-        return Admission.objects.filter(
-            date__month=date.today().month,
-            date__year = date.today().year,
-            ).count()
+        return self.filter(
+            admission__date__month=date.today().month,
+            admission__date__year = date.today().year,
+            )
 
     def month_mortality(self):
-        return Discharge.objects.filter(
-            date__month=date.today().month,
-            date__year = date.today().year,
-            mortality = True
-            ).count()
+        return self.filter(
+            discharge__date__month=date.today().month,
+            discharge__date__year = date.today().year,
+            discharge__mortality = True
+            )
 
 
 class Patient(PatientMethods, Person):

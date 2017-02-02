@@ -17,16 +17,90 @@
           <span class="text-muted">current patients</span>
         </div>
         <div class="col-xs-4 placeholder">
-          <span class="text-info">
-              <h1>{{Patient.month_admissions}}</h1>
-              month admissions
-          </span>
+            <a href="#admissions" data-toggle="modal">
+                  <span class="text-info">
+                      <h1>{{Patient.month_admissions.count}}</h1>
+                      month admissions
+                  </span>
+              </a>
+          <div id="admissions" class="modal fade" role="dialog">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h1 class="text-info">
+                              Month Admissions
+                          </h1>
+                      </div>
+                    <div class="modal-body">
+              <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th>Name</th>
+                        <th>Serial No</th>
+                        <th>LOS</th>
+                      </tr>
+                    </thead>
+                  <tbody>
+                    {%for patient in Patient.month_admissions %}
+                    <tr>
+                      <td><a href="{%url 'emr:patient_detail' patient.id %}">{{patient}}</a></td>
+                      <td>{{patient.serial_no}}</td>
+                      <td>{{patient.los}}</td>
+                    </tr>
+                    {%endfor%}
+                  </tbody>
+                </table>
+                <button data-dismiss="modal" type="button">close
+                </button>
+            </div>
+            </div>
+            </div>
+              </div>
+          </div>
         </div>
         <div class="col-xs-4 placeholder">
-          <span class="text-danger">
-              <h1>{{Patient.month_mortality}}</h1>
-              month mortality
-          </span>
+            <a href="#mortality" data-toggle="modal">
+              <span class="text-danger">
+                  <h1>{{Patient.month_mortality.count}}</h1>
+                  month mortality
+              </span>
+            </a>
+              <div id="mortality" class="modal fade" role="dialog">
+                  <div class="modal-dialog">
+                      <div class="modal-content">
+                          <div class="modal-header">
+                              <h1 class="text-danger">
+                                  Month Mortality
+                              </h1>
+                          </div>
+                        <div class="modal-body">
+                      <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                              <tr>
+                                <th>Name</th>
+                                <th>Serial No</th>
+                                <th>LOS</th>
+                              </tr>
+                            </thead>
+                          <tbody>
+                            {%for patient in Patient.month_mortality %}
+                            <tr>
+                              <td><a href="{%url 'emr:patient_detail' patient.id %}">{{patient}}</a></td>
+                              <td>{{patient.serial_no}}</td>
+                              <td>{{patient.los}}</td>
+                            </tr>
+                            {%endfor%}
+                          </tbody>
+                        </table>
+                      </div>
+                      <button data-dismiss="modal" type="button">close
+                      </button>
+                  </div>
+                  </div>
+                  </div>
+              </div>
         </div>
     </div>
 

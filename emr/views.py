@@ -38,8 +38,7 @@ class Home(LoginRequiredMixin, generic.ListView):
     template_name = 'emr/home.html'
     context_object_name = 'current_patients'
     def get_queryset(self):
-        IDs = [p.pk for p in Patient.objects.all() if p.is_currently_admitted()]
-        return Patient.objects.filter(pk__in=IDs)
+        return Patient.objects.current()
 
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
