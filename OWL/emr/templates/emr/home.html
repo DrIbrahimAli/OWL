@@ -1,0 +1,77 @@
+{% extends 'emr/base.html' %}
+{% load static %}
+
+{% block body_content %}
+
+
+<div class="container">
+<div class="row">
+
+  <div class="col-md-12 main">
+    <h1 class="page-header"></h1>
+
+    <div class="row placeholders" style="text-align : center">
+
+        <div class="col-xs-4 placeholder">
+          <h1>{{current_patients.count}}</h1>
+          <span class="text-muted">current patients</span>
+        </div>
+        <div class="col-xs-4 placeholder">
+          <span class="text-info">
+              <h1>{{Patient.month_admissions}}</h1>
+              month admissions
+          </span>
+        </div>
+        <div class="col-xs-4 placeholder">
+          <span class="text-danger">
+              <h1>{{Patient.month_mortality}}</h1>
+              month mortality
+          </span>
+        </div>
+    </div>
+
+    <h2 class="sub-header" style="text-align: center">Currently Admitted Patients</h2>
+      <div class="row">
+        <a href="{%url 'emr:patient_add' %}">
+            <button class="btn btn btn-sm pull-right" type="button">
+                <span class="glyphicon glyphicon-plus"></span> add patient
+            </button>
+        </a>
+      </div>
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Name</th>
+            <th>Serial No</th>
+            <th>LOS</th>
+          </tr>
+        </thead>
+        <tbody>
+          {%for patient in current_patients %}
+          <tr>
+            <td>
+                <a href="{%url 'emr:note_add' patient.id %}">
+                <span class="glyphicon glyphicon-edit"></span>
+                </a>
+                &nbsp;
+                <a href="{%url 'emr:patient_discharge' patient.id %}">
+                <span class="text-danger">
+                    <span class="glyphicon glyphicon-eject"></span>
+                </span>
+                </a>
+            </td>
+            <td><a href="{%url 'emr:patient_detail' patient.id %}">{{patient}}</a></td>
+            <td>{{patient.serial_no}}</td>
+            <td>{{patient.los}}</td>
+          </tr>
+          {%endfor%}
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</div>
+{% endblock %}

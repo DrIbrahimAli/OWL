@@ -1,0 +1,50 @@
+{% extends 'emr/base.html' %}
+{% load static %}
+
+{% block body_content %}
+
+
+<div class="container">
+<div class="row">
+
+<div class="col-md-12 main">
+
+<div class="well">
+    <form class="form-horizontal" action="{% url 'emr:patient_search' %}" method="get" accept-charset="utf-8">{% csrf_token  %}
+        <div class="form-group">
+          <input class="form-control" name="q" type="text" placeholder="Search patients by name">
+          <button class="btn btn-primary pull-right" type="submit">
+            <span class="glyphicon glyphicon-search"></span> search
+          </button>
+        </div>
+    </form>
+</div>
+
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Name</th>
+            <th>Serial No</th>
+            <th>LOS</th>
+          </tr>
+        </thead>
+        <tbody>
+          {%for patient in patient_list %}
+          <tr>
+            <td>
+            </td>
+            <td><a href="{%url 'emr:patient_detail' patient.id %}">{{patient}}</a></td>
+            <td>{{patient.serial_no}}</td>
+            <td>{{patient.los}}</td>
+          </tr>
+          {%endfor%}
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</div>
+{% endblock %}

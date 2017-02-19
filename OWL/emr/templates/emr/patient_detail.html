@@ -1,0 +1,298 @@
+{%extends 'emr/base.html'%}
+{%load static%}
+
+{% block body_content %}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 main" style="text-align : center">
+          <h1 class="page-header">{{patient}}
+
+          </h1>
+
+            <a href="{%url 'emr:patient_edit' patient.id %}">[edit]</a></br>
+            {%if patient.never_admitted%}
+            Never admitted!!!
+            <a href="{%url 'emr:patient_admit' patient.id %}">
+                <span class="glyphicon glyphicon-download-alt"></span>
+            </a>
+            {% else %}
+            {% if patient.is_currently_admitted %}
+            <a href="{%url 'emr:note_add' patient.id %}">
+                <span class="glyphicon glyphicon-edit"></span>
+            </a>
+            &nbsp;
+            <a href="{%url 'emr:patient_discharge' patient.id %}">
+                <span class="text-danger">
+                    <span class="glyphicon glyphicon-eject"></span>
+                </span>
+            </a>
+            {% else %}
+            {% if patient.last_discharge.mortality %}
+            Deceased on {{patient.last_discharge.date}}
+            {% else %}
+            Discharged on {{patient.last_discharge.date}}</b>
+            {{patient.last_discharge.recommendations}}
+            <a href="{%url 'emr:patient_admit' patient.id %}">
+                <span class="glyphicon glyphicon-download-alt"></span>
+            </a>
+            {%endif%}
+            {%endif%}
+            {%endif%}
+            </br>
+            {{patient.blood_group}}</br>
+            {% if patient.date_of_birth %}
+            {{patient.date_of_birth}}</br>
+            {% endif %}
+            {{patient.age}}</br>
+            {% if not patient.never_admitted %}
+            LOS {{patient.los}}</br>
+            {% endif %}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 main">
+            <h3>highlights</h3>
+            {{patient.get_highlights| linebreaks}}
+        </div>
+
+        <div class="col-md-9 main">
+            <ul class="nav nav-tabs">
+                <li class="active">
+                    <a  data-toggle="tab" href="#notes">
+                        Physician Notes
+                    </a>
+                </li>
+                <li>
+                    <a  data-toggle="tab" href="#labs">
+                        Labs
+                    </a>
+                </li>
+                <li>
+                    <a  data-toggle="tab" href="#history">
+                        History
+                    </a>
+                </li>
+                <li>
+                    <a  data-toggle="tab" href="#radiology">
+                        Radiology
+                    </a>
+                </li>
+                <li>
+                    <a  data-toggle="tab" href="#procedures">
+                        Procedures
+                    </a>
+                </li>
+            </ul>
+
+            <div class="tab-content">
+
+                <div id="notes" class="tab-pane fade in active">
+                    <div class="row">
+                        <a href="{%url 'emr:note_add' patient.id %}">
+                          <button class="btn btn btn-sm pull-right" type="button">
+                              <span class="glyphicon glyphicon-edit"></span>add note
+                          </button>
+                      </a>
+                    </div>
+                {% for note in patient.note_set.all %}
+                <h3><a href="#note{{note.pk}}" data-toggle="collapse">{{note.date}}</a></h3>
+                <div id="note{{note.pk}}" class="collapse in">
+                    <h4>by {{note.physician}} &nbsp;
+                        <a href="{%url 'emr:note_edit' pk=note.pk %}">
+                            [edit]
+                        </a>
+                    </h4>
+
+                    {{note.colored | linebreaks}}
+                </div>
+                {% endfor %}
+
+                </div>
+
+
+                <div id="labs" class="tab-pane fade">
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a  data-toggle="tab" href="#routine_labs">
+                                Routine
+                            </a>
+                        </li>
+                        <li>
+                            <a  data-toggle="tab" href="#other_labs">
+                                Others
+                            </a>
+                        </li>
+                        <li>
+                            <a  data-toggle="tab" href="#cultures">
+                                Cultures
+                            </a>
+                        </li>
+                    </ul>
+                    <div id="routine_labs" class="tab-pane fade in active">
+                        <div class="pull-right">
+                            <a href="{%url 'emr:routine_lab' patient.id %}">
+                              <button class="btn btn btn-sm" type="button">
+                                  <span class="glyphicon glyphicon-plus"></span>&nbsp;routine
+                              </button>
+                            </a>
+                            &nbsp;
+                            <a href="{%url 'emr:lab_quant_add' patient.id %}">
+                              <button class="btn btn btn-sm" type="button">
+                                  <span class="glyphicon glyphicon-plus"></span>&nbsp;extras
+                              </button>
+                            </a>
+                        </div>
+                        <div>
+                        {{patient.get_labs}}
+                        </div>
+                    </div>
+                    <div id="other_labs" class="tab-pane fade">
+                        <div class="pull-right">
+                            <a href="{%url 'emr:lab_qual_add' patient.id %}">
+                              <button class="btn btn btn-sm" type="button">
+                                  <span class="glyphicon glyphicon-plus"></span>
+                              </button>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="cultures" class="tab-pane fade">
+                        <div class="pull-right">
+                            <a href="{%url 'emr:culture_add' patient.id %}">
+                              <button class="btn btn btn-sm" type="button">
+                                  <span class="glyphicon glyphicon-plus"></span>
+                              </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="history" class="tab-pane fade">
+                    {% if patient.history %}
+                    <a href="{%url 'emr:history_edit' pk=patient.history.pk %}">
+                        [edit]
+                    </a>
+                    {{patient.get_history | linebreaks}}
+                    {% else %}
+                    <a href="{%url 'emr:history_add' patient.id %}">
+                      <button class="btn btn btn-sm pull-right" type="button">
+                          <span class="glyphicon glyphicon-edit"></span>Take History
+                      </button>
+                    </a>
+                    {% endif %}
+                </div>
+
+                <div id="radiology" class="tab-pane fade">
+                    <div class="pull-right">
+                        <a href="{%url 'emr:radiology_add' patient.id %}">
+                          <button class="btn btn btn-sm" type="button">
+                              <span class="glyphicon glyphicon-plus"></span>&nbsp;Radiology
+                          </button>
+                        </a>&nbsp;
+                        <a href="{%url 'emr:echocardiography_add' patient.id %}">
+                          <button class="btn btn btn-sm" type="button">
+                              <span class="glyphicon glyphicon-plus"></span>&nbsp;Echocardiography
+                          </button>
+                        </a>&nbsp;
+                        <a href="{%url 'emr:interven_rad_add' patient.id %}">
+                          <button class="btn btn btn-sm" type="button">
+                              <span class="glyphicon glyphicon-plus"></span>&nbsp;Interventional
+                          </button>
+                        </a>
+
+                    </div>
+
+                    {% for study in patient.radiology_set.all %}
+                    <div class="well">
+                        <h3><a href="#study{{study.pk}}" data-toggle="collapse">{{study}}</a></h3>
+                        <div id="study{{study.pk}}" class="collapse">
+                            {% if study.echocardiography %}
+                            <a href="{%url 'emr:echocardiography_edit' pk=study.echocardiography.pk %}">
+                            {% elif study.interventional_radiology%}
+                            <a href="{%url 'emr:interven_rad_edit' pk=study.interventional_radiology.pk %}">
+                            {% else %}
+                            <a href="{%url 'emr:radiology_edit' pk=study.pk %}">
+                            {% endif %}
+                                    [edit]
+                            </a>
+                            {%if study.image %}
+                            <img class="img-responsive" src="{{MEDIA_URL}}{{study.image}}"></br>
+                            {% endif %}
+                            {% if study.echocardiography %}
+                            {{study.echocardiography.report | linebreaks}}
+                            {% else %}
+                            {{study.report | linebreaks}}
+                            {% endif %}
+
+                        </div>
+
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <div id="procedures" class="tab-pane fade">
+                    <div class="pull-right">
+                        <a href="{%url 'emr:procedure_add' patient.id %}">
+                          <button class="btn btn btn-sm" type="button">
+                              <span class="glyphicon glyphicon-plus"></span>&nbsp;Procedure
+                          </button>
+                        </a>&nbsp;
+                        <a href="{%url 'emr:surgery_add' patient.id %}">
+                          <button class="btn btn btn-sm" type="button">
+                              <span class="glyphicon glyphicon-plus"></span>&nbsp;Surgery
+                          </button>
+                        </a>
+                    </div>
+
+                    {% for procedure in patient.procedure_set.all %}
+                    <div class="well">
+                        <h3>
+                            {% if procedure.surgery %}
+                            <a href="#procedure{{procedure.pk}}" data-toggle="collapse">
+                                <span class="text-warning">
+                                {{procedure}}
+                                </span>
+                            </a>
+                            {% else %}
+                            <a href="#procedure{{procedure.pk}}" data-toggle="collapse">
+                                {{procedure}}
+                            </a>
+                            {% endif %}
+                        </h3>
+                        <div id="procedure{{procedure.pk}}" class="collapse">
+                            {% if procedure.surgery %}
+                            <a href="{%url 'emr:surgery_edit' pk=procedure.surgery.pk %}">
+                            {% else %}
+                            <a href="{%url 'emr:procedure_edit' pk=procedure.pk %}">
+                            {% endif %}
+                                    [edit]
+                            </a>
+                            <p>
+                            Operator: &nbsp;{{procedure.operator}}</br>
+                            Anaesthelogist: &nbsp;{{procedure.anaesthelogist}}
+                            </p>
+                            <h4>Details</h4>
+                            <p>
+                                {{procedure.details | linebreaks}}
+                            </p>
+                            {% if procedure.complications %}
+                            <h4>
+                                <span class="text-warning">Complications</span>
+                            </h4>
+                            <p>{{procedure.complications | linebreaks}}</p>
+                            {% endif %}
+                        </div>
+
+                    </div>
+                    {% endfor %}
+                </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

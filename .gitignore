@@ -1,0 +1,4 @@
+/media
+**/*.pyc
+**/*.ipynb*
+**/migrations

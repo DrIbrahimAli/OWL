@@ -1,0 +1,314 @@
+[
+{
+    "model": "emr.lab_quant",
+    "pk": 1,
+    "fields": {
+        "name": "creat",
+        "unit": "mg/dL",
+        "limit_max": "0.50",
+        "limit_min": "1.30",
+        "accepted_max": "2.00",
+        "accepted_min": "0.00"
+    }
+},
+
+{
+    "model": "emr.lab_quant",
+    "pk": 2,
+    "fields": {
+        "name": "urea",
+        "unit": "mg/dL",
+        "limit_max": "10.00",
+        "limit_min": "50.00",
+        "accepted_max": "100.00",
+        "accepted_min": "0.00"
+    }
+},
+
+{
+    "model": "emr.lab_quant",
+    "pk": 3,
+    "fields": {
+        "name": "bil_total",
+        "unit": "mg/dL",
+        "limit_max": "1.00",
+        "limit_min": "0.00",
+        "accepted_max": "2.50",
+        "accepted_min": "0.00"
+    }
+},
+
+{
+    "model": "emr.lab_quant",
+    "pk": 4,
+    "fields": {
+        "name": "bil_direct",
+        "unit": "mg/dL",
+        "limit_max": "0.30",
+        "limit_min": "0.00",
+        "accepted_max": "0.70",
+        "accepted_min": "0.00"
+    }
+},
+
+{
+    "model": "emr.lab_quant",
+    "pk": 5,
+    "fields": {
+        "name": "AST",
+        "unit": "U/L",
+        "limit_max": "38.00",
+        "limit_min": "0.00",
+        "accepted_max": "120.00",
+        "accepted_min": "0.00"
+    }
+},
+
+{
+    "model": "emr.lab_quant",
+    "pk": 6,
+    "fields": {
+        "name": "ALT",
+        "unit": "U/L",
+        "limit_max": "40.00",
+        "limit_min": "0.00",
+        "accepted_max": "120.00",
+        "accepted_min": "0.00"
+    }
+},
+
+{
+    "model": "emr.lab_quant",
+    "pk": 7,
+    "fields": {
+        "name": "CK",
+        "unit": "U/L",
+        "limit_max": "232.00",
+        "limit_min": "0.00",
+        "accepted_max": "2320.00",
+        "accepted_min": "0.00"
+    }
+},
+
+{
+    "model": "emr.lab_quant",
+    "pk": 8,
+    "fields": {
+        "name": "CK-MB",
+        "unit": "ng/L",
+        "limit_max": "24.00",
+        "limit_min": "0.00",
+        "accepted_max": "240.00",
+        "accepted_min": "0.00"
+    }
+},
+
+{
+    "model": "emr.lab_quant",
+    "pk": 9,
+    "fields": {
+        "name": "ALBUMIN",
+        "unit": "g/dL",
+        "limit_max": "5.00",
+        "limit_min": "3.50",
+        "accepted_max": "5.00",
+        "accepted_min": "2.00"
+    }
+},
+
+{
+    "model": "emr.lab_quant",
+    "pk": 10,
+    "fields": {
+        "name": "Protein",
+        "unit": "g/dL",
+        "limit_max": "7.00",
+        "limit_min": "4.00",
+        "accepted_max": "7.00",
+        "accepted_min": "4.00"
+    }
+},
+
+{
+    "model": "emr.lab_quant",
+    "pk": 11,
+    "fields": {
+        "name": "Na",
+        "unit": "mmol/L",
+        "limit_max": "150.00",
+        "limit_min": "135.00",
+        "accepted_max": "155.00",
+        "accepted_min": "120.00"
+    }
+},
+
+{
+    "model": "emr.lab_quant",
+    "pk": 12,
+    "fields": {
+        "name": "K",
+        "unit": "mmol/L",
+        "limit_max": "5.20",
+        "limit_min": "3.50",
+        "accepted_max": "6.00",
+        "accepted_min": "2.50"
+    }
+},
+
+{
+    "model": "emr.lab_quant",
+    "pk": 13,
+    "fields": {
+        "name": "Ca_total",
+        "unit": "mg/dL",
+        "limit_max": "10.20",
+        "limit_min": "8.60",
+        "accepted_max": "11.00",
+        "accepted_min": "7.00"
+    }
+},
+
+{
+    "model": "emr.lab_quant",
+    "pk": 14,
+    "fields": {
+        "name": "Ca_ionized",
+        "unit": "mmol/L",
+        "limit_max": "1.32",
+        "limit_min": "1.12",
+        "accepted_max": "1.32",
+        "accepted_min": "0.90"
+    }
+},
+
+
+{
+    "model": "emr.lab_quant",
+    "pk": 15,
+    "fields": {
+        "name": "Phosphorus",
+        "unit": "mg/gL",
+        "limit_max": "4.90",
+        "limit_min": "2.50",
+        "accepted_max": "4.90",
+        "accepted_min": "1.50"
+    }
+},
+
+{
+    "model": "emr.lab_quant",
+    "pk": 16,
+    "fields": {
+        "name": "Mg",
+        "unit": "mg/dL",
+        "limit_max": "1.60",
+        "limit_min": "2.60",
+        "accepted_max": "4.00",
+        "accepted_min": "16.00"
+    }
+},
+
+{
+    "model": "emr.lab_quant",
+    "pk": 17,
+    "fields": {
+        "name": "Hb",
+        "unit": "g/dL",
+        "limit_max": "17.00",
+        "limit_min": "12.00",
+        "accepted_max": "17.00",
+        "accepted_min": "8.00"
+    }
+},
+
+{
+    "model": "emr.lab_quant",
+    "pk": 18,
+    "fields": {
+        "name": "Hct",
+        "unit": "%",
+        "limit_max": "50.00",
+        "limit_min": "38.00",
+        "accepted_max": "50.00",
+        "accepted_min": "28.00"
+    }
+},
+
+{
+    "model": "emr.lab_quant",
+    "pk": 19,
+    "fields": {
+        "name": "TLC",
+        "unit": " x10^9/L",
+        "limit_max": "11.00",
+        "limit_min": "3.0",
+        "accepted_max": "25.00",
+        "accepted_min": "2.00"
+    }
+},
+
+{
+    "model": "emr.lab_quant",
+    "pk": 20,
+    "fields": {
+        "name": "platelets",
+        "unit": "x10^9/L",
+        "limit_max": "450.00",
+        "limit_min": "150.00",
+        "accepted_max": "600.00",
+        "accepted_min": "80.00"
+    }
+},
+
+{
+    "model": "emr.lab_quant",
+    "pk": 21,
+    "fields": {
+        "name": "PT",
+        "unit": "sec",
+        "limit_max": "0.00",
+        "limit_min": "0.00",
+        "accepted_max": "0.00",
+        "accepted_min": "0.00"
+    }
+},
+
+{
+    "model": "emr.lab_quant",
+    "pk": 22,
+    "fields": {
+        "name": "PC",
+        "unit": "%",
+        "limit_max": "100.00",
+        "limit_min": "75.00",
+        "accepted_max": "100.00",
+        "accepted_min": "50.00"
+    }
+},
+
+{
+    "model": "INR",
+    "pk": 23,
+    "fields": {
+        "name": "platelets",
+        "unit": " ",
+        "limit_max": "1.20",
+        "limit_min": "9.00",
+        "accepted_max": "3.00",
+        "accepted_min": "0.00"
+    }
+},
+
+{
+    "model": "emr.lab_quant",
+    "pk": 24,
+    "fields": {
+        "name": "PTT",
+        "unit": "sec",
+        "limit_max": "40.00",
+        "limit_min": "0.00",
+        "accepted_max": "80.00",
+        "accepted_min": "0.00"
+    }
+}
+]
