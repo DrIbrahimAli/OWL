@@ -88,6 +88,7 @@
             <div class="tab-content">
 
                 <div id="notes" class="tab-pane fade in active">
+                    {% if patient.is_currently_admitted %}
                     <div class="row">
                         <a href="{%url 'emr:note_add' patient.id %}">
                           <button class="btn btn btn-sm pull-right" type="button">
@@ -95,14 +96,17 @@
                           </button>
                       </a>
                     </div>
+                    {% endif %}
                <p>
                {% if patient.last_discharge.mortality %}
                Deceased on {{patient.last_discharge.date}}
                {% else %}
-               Discharged on {{patient.last_discharge.date}}</br>
-               {{patient.last_discharge.status_on_transfer | linebreaks}}
-               {{patient.last_discharge.recommendations | linebreaks}}
-               {%endif%}
+                        {% if not patient.is_currently_admitted and not patient.never_admitted %}
+                        Discharged on {{patient.last_discharge.date}}</br>
+                        {{patient.last_discharge.status_on_transfer | linebreaks}}
+                        {{patient.last_discharge.recommendations | linebreaks}}
+                        {%endif%}
+               {% endif %}
                </p>
                {% for note in patient.note_set.all %}
                 <h3><a href="#note{{note.pk}}" data-toggle="collapse">{{note.date}}</a></h3>

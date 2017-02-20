@@ -43,6 +43,7 @@ class Transfer(TransferMethods, models.Model):
     ('ICU2','ICU-2'),
     ('ICU3','ICU-3'),
     ('ICU4','ICU-4'),
+    ('MORT','Mortuary'),
     ]
     date=models.DateField(default=date.today)
     patient=models.ForeignKey('Patient', on_delete=models.CASCADE)

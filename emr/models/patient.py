@@ -60,7 +60,7 @@ class Admission(Transfer):
     ]
     consultant = models.ManyToManyField('Physician', limit_choices_to={'rank':'CN'})
     score_system = models.CharField(max_length=12,choices=SCORES)
-    risk_score = models.PositiveSmallIntegerField(null=True,blank=True)
+    risk_score = models.DecimalField(max_digits=7,decimal_places=2)
     cause_of_admission = models.CharField(max_length=300)
 
 

@@ -68,9 +68,9 @@ class PatientSearch(LoginRequiredMixin, generic.ListView):
                 reduce(operator.and_,
                        (Q(middle_name__icontains=q) for q in query_list)) |
                 reduce(operator.and_,
-                       (Q(last_name__icontains=q) for q in query_list))   |
-                reduce(operator.and_,
-                       (Q(serial_no=q) for q in query_list))
+                       (Q(last_name__icontains=q) for q in query_list))   
+#                reduce(operator.and_,
+#                      (Q(serial_no=q) for q in query_list))
             )
 
         return result

@@ -7,7 +7,11 @@ from django.dispatch import receiver
 
 class Physician(Person):
     SPECIALITIES=[
-    ('CTS','cardiothoracic surgery')
+    ('CTS','cardiothoracic surgery'),
+    ('ANESTH','anaesthesiology'),
+    ('PULM','pulmonoloy'),
+    ('NEPHR','nephrology'),
+    ('URO','urology'),
     ]
 
     RANKS=[

@@ -1,5 +1,53 @@
 [
 {
+    "model": "sessions.session",
+    "pk": "1dk2ikx0g4cft4glel3nqmai7tmmnk0c",
+    "fields": {
+        "session_data": "YTg5YzMyYmU1ODUyODE0NmE1ZjMwMDRiZTMwYTMwNzYxNTY1NzVmZTp7Il9hdXRoX3VzZXJfaGFzaCI6IjU5MTcxNzNjY2IxZjY5OGU3NDAxMGI5MGEyMGZiZjJmOWIxYjA1ZjQiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=",
+        "expire_date": "2017-03-06T08:06:09.845Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "2xf026y790xe9zxl780dtenjl0swt5xb",
+    "fields": {
+        "session_data": "NzVlOWMzYjQ2NTZiMjkxMzdjYzUwY2VjYTlmNzA3NWM4ZDYyZTg0MDp7Il9hdXRoX3VzZXJfaWQiOiIyIiwiX2F1dGhfdXNlcl9oYXNoIjoiOTU1Y2FjNDE5MjlhMjZlM2ZiM2Q1ZjZhMTVkOTJhNmEwNThkZDIwMyIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIn0=",
+        "expire_date": "2017-02-28T12:29:08.047Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "5su7wwlm4j400atj179swx9m71446t2h",
+    "fields": {
+        "session_data": "Y2U5YjdkYWQ5MDZkNWNkNDMxMWQ2ZWVlNDkxZWU1YjY3ZThiN2E3NTp7Il9hdXRoX3VzZXJfaGFzaCI6IjU5MTcxNzNjY2IxZjY5OGU3NDAxMGI5MGEyMGZiZjJmOWIxYjA1ZjQiLCJfYXV0aF91c2VyX2lkIjoiMSIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIn0=",
+        "expire_date": "2017-03-06T10:05:31.858Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "bjz7wfugwida71ww789f76xfg3s7ls2o",
+    "fields": {
+        "session_data": "NzVlOWMzYjQ2NTZiMjkxMzdjYzUwY2VjYTlmNzA3NWM4ZDYyZTg0MDp7Il9hdXRoX3VzZXJfaWQiOiIyIiwiX2F1dGhfdXNlcl9oYXNoIjoiOTU1Y2FjNDE5MjlhMjZlM2ZiM2Q1ZjZhMTVkOTJhNmEwNThkZDIwMyIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIn0=",
+        "expire_date": "2017-03-04T11:27:32.632Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "kf5a01tbm573coqv4rqlp9d5psix5d3z",
+    "fields": {
+        "session_data": "ZDVkNjNmM2M5YmM5NDJjNWIyMzc2OGZiMzFkZTExZjBkZjg3NGIyZDp7Il9hdXRoX3VzZXJfaWQiOiIzIiwiX2F1dGhfdXNlcl9oYXNoIjoiOWNiZmU2ODI2NmM2ZmVmZjQzNWNjOWQyZGMzZmVhMTBjZDIxMzkyMyIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIn0=",
+        "expire_date": "2017-02-28T12:32:02.053Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "vlxpcqf50ht3a4eiuy3vguyv8g7ql855",
+    "fields": {
+        "session_data": "MDA2MWM3ZjRjMzdhNWMyOWExYWE4ZTM4YWVkMDc3ZTc2ZGJjNjQwMDp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9oYXNoIjoiNTkxNzE3M2NjYjFmNjk4ZTc0MDEwYjkwYTIwZmJmMmY5YjFiMDVmNCIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIn0=",
+        "expire_date": "2017-03-04T11:25:57.894Z"
+    }
+},
+{
     "model": "emr.patient",
     "pk": 1,
     "fields": {
@@ -21,6 +69,273 @@
     }
 },
 {
+    "model": "emr.patient",
+    "pk": 2,
+    "fields": {
+        "first_name": "\u0623\u062d\u0645\u062f",
+        "middle_name": "\u0627\u0644\u0633\u064a\u062f \u0645\u062d\u0645\u062f",
+        "last_name": "\u064a\u0648\u0633\u0641",
+        "sex": "M",
+        "id_card": null,
+        "date_of_birth": null,
+        "nationality": "EGY",
+        "phone": "",
+        "address": "",
+        "email": "",
+        "serial_no": 171337966,
+        "weight": null,
+        "height": null,
+        "abo_blood": null,
+        "rh_blood": null
+    }
+},
+{
+    "model": "emr.patient",
+    "pk": 3,
+    "fields": {
+        "first_name": "\u0639\u0641\u0627\u0641",
+        "middle_name": "\u0645\u062d\u0645\u062f",
+        "last_name": "\u0645\u062d\u0645\u062f",
+        "sex": "F",
+        "id_card": null,
+        "date_of_birth": "1954-08-07",
+        "nationality": "EGY",
+        "phone": "",
+        "address": "",
+        "email": "",
+        "serial_no": 171341478,
+        "weight": null,
+        "height": null,
+        "abo_blood": null,
+        "rh_blood": null
+    }
+},
+{
+    "model": "emr.patient",
+    "pk": 4,
+    "fields": {
+        "first_name": "\u0639\u0627\u062f\u0644",
+        "middle_name": "\u062d\u0633\u0646",
+        "last_name": "\u062d\u0633\u0627\u0646\u064a\u0646",
+        "sex": "M",
+        "id_card": 0,
+        "date_of_birth": null,
+        "nationality": "EGY",
+        "phone": "",
+        "address": "",
+        "email": "",
+        "serial_no": 171341702,
+        "weight": null,
+        "height": null,
+        "abo_blood": null,
+        "rh_blood": null
+    }
+},
+{
+    "model": "emr.patient",
+    "pk": 5,
+    "fields": {
+        "first_name": "\u0645\u0633\u0639\u062f",
+        "middle_name": "\u0645\u0633\u0639\u062f",
+        "last_name": "\u0645\u062d\u0645\u062f",
+        "sex": "M",
+        "id_card": null,
+        "date_of_birth": null,
+        "nationality": "EGY",
+        "phone": "",
+        "address": "",
+        "email": "",
+        "serial_no": 171341226,
+        "weight": null,
+        "height": null,
+        "abo_blood": null,
+        "rh_blood": null
+    }
+},
+{
+    "model": "emr.patient",
+    "pk": 6,
+    "fields": {
+        "first_name": "\u0639\u0627\u0637\u0641",
+        "middle_name": "\u0639\u0628\u062f\u0627\u0644\u062a\u0648\u0627\u0628",
+        "last_name": "\u062d\u0633\u0646",
+        "sex": "M",
+        "id_card": null,
+        "date_of_birth": null,
+        "nationality": "EGY",
+        "phone": "",
+        "address": "",
+        "email": "",
+        "serial_no": 171341751,
+        "weight": null,
+        "height": null,
+        "abo_blood": null,
+        "rh_blood": null
+    }
+},
+{
+    "model": "emr.patient",
+    "pk": 7,
+    "fields": {
+        "first_name": "\u0639\u0635\u0627\u0645",
+        "middle_name": "\u062d\u062c\u0627\u0632\u064a",
+        "last_name": "\u0627\u0644\u062e\u0648\u0644\u064a",
+        "sex": "M",
+        "id_card": null,
+        "date_of_birth": null,
+        "nationality": "EGY",
+        "phone": "",
+        "address": "",
+        "email": "",
+        "serial_no": 171341590,
+        "weight": null,
+        "height": null,
+        "abo_blood": null,
+        "rh_blood": null
+    }
+},
+{
+    "model": "emr.patient",
+    "pk": 8,
+    "fields": {
+        "first_name": "\u062c\u0645\u064a\u0644\u0629",
+        "middle_name": "\u0641\u0631\u063a\u0644\u064a",
+        "last_name": "\u0639\u0627\u0645\u0631",
+        "sex": "F",
+        "id_card": null,
+        "date_of_birth": null,
+        "nationality": "EGY",
+        "phone": "",
+        "address": "",
+        "email": "",
+        "serial_no": 171341520,
+        "weight": null,
+        "height": null,
+        "abo_blood": null,
+        "rh_blood": null
+    }
+},
+{
+    "model": "emr.patient",
+    "pk": 9,
+    "fields": {
+        "first_name": "\u0623\u064a\u0645\u0646",
+        "middle_name": "\u062d\u0627\u0645\u062f \u0645\u062e\u062a\u0627\u0631",
+        "last_name": "\u062d\u0627\u0645\u062f",
+        "sex": "M",
+        "id_card": null,
+        "date_of_birth": "1978-04-13",
+        "nationality": "EGY",
+        "phone": "",
+        "address": "",
+        "email": "",
+        "serial_no": 171341926,
+        "weight": null,
+        "height": null,
+        "abo_blood": "A",
+        "rh_blood": "P"
+    }
+},
+{
+    "model": "emr.patient",
+    "pk": 10,
+    "fields": {
+        "first_name": "\u0635\u0641\u0648\u062a",
+        "middle_name": "\u0627\u0645\u064a\u0646",
+        "last_name": "\u0639\u0628\u062f\u0627\u0644\u0631\u062d\u064a\u0645",
+        "sex": "M",
+        "id_card": null,
+        "date_of_birth": "1951-02-24",
+        "nationality": "EGY",
+        "phone": "",
+        "address": "",
+        "email": "",
+        "serial_no": 171341931,
+        "weight": null,
+        "height": null,
+        "abo_blood": "A",
+        "rh_blood": "P"
+    }
+},
+{
+    "model": "emr.patient",
+    "pk": 11,
+    "fields": {
+        "first_name": "\u0639\u0645\u0631",
+        "middle_name": "\u0639\u0628\u062f\u0627\u0644\u0631\u062d\u064a\u0645 \u0627\u062d\u0645\u062f",
+        "last_name": "\u0627\u0644\u0634\u0631\u064a\u0641",
+        "sex": "M",
+        "id_card": null,
+        "date_of_birth": "1933-08-25",
+        "nationality": "EGY",
+        "phone": "",
+        "address": "",
+        "email": "",
+        "serial_no": 171341839,
+        "weight": null,
+        "height": null,
+        "abo_blood": "A",
+        "rh_blood": "P"
+    }
+},
+{
+    "model": "emr.patient",
+    "pk": 14,
+    "fields": {
+        "first_name": "\u0633\u0627\u0645\u064a",
+        "middle_name": "\u0645\u062d\u0645\u062f",
+        "last_name": "\u0627\u0644\u062c\u0646\u064a\u062f\u064a",
+        "sex": "M",
+        "id_card": null,
+        "date_of_birth": "1959-05-21",
+        "nationality": "EGY",
+        "phone": "",
+        "address": "",
+        "email": "",
+        "serial_no": 171341923,
+        "weight": null,
+        "height": null,
+        "abo_blood": null,
+        "rh_blood": null
+    }
+},
+{
+    "model": "emr.patient",
+    "pk": 15,
+    "fields": {
+        "first_name": "\u0627\u062d\u0645\u062f",
+        "middle_name": "\u0645\u062d\u0645\u062f \u062a\u064a\u0645\u0648\u0631",
+        "last_name": "\u0633\u0639\u062f \u0627\u0644\u062f\u064a\u0646",
+        "sex": "M",
+        "id_card": null,
+        "date_of_birth": "1975-01-01",
+        "nationality": "EGY",
+        "phone": "",
+        "address": "",
+        "email": "",
+        "serial_no": 171341867,
+        "weight": null,
+        "height": null,
+        "abo_blood": null,
+        "rh_blood": null
+    }
+},
+{
+    "model": "emr.history",
+    "pk": 1,
+    "fields": {
+        "patient": 2,
+        "is_hypertensive": false,
+        "is_smoker": false,
+        "is_dyslipidemic": false,
+        "is_diabetic_I": false,
+        "is_diabetic_II": false,
+        "present_history": "",
+        "past_history": "HCV +ve\r\nErossive Gastritis",
+        "drug_and_allergy": ""
+    }
+},
+{
     "model": "emr.admission",
     "pk": 1,
     "fields": {
@@ -29,10 +344,414 @@
         "transfer_to": "ICU3",
         "transfer_from": "OR",
         "status_on_transfer": "intubated mechanically ventilated",
-        "score_system": "APACHE_II",
-        "risk_score": 15,
+        "score_system": "EUROSCORE_II",
+        "risk_score": 1,
         "cause_of_admission": "post-operative care following evacuation of pericardial hematoma",
         "consultant": []
+    }
+},
+{
+    "model": "emr.admission",
+    "pk": 2,
+    "fields": {
+        "date": "2017-02-14",
+        "patient": 2,
+        "transfer_to": "ICU3",
+        "transfer_from": "OR",
+        "status_on_transfer": "@11:30am\r\nsedated, intubated & MV\r\nH.D stable\r\nno inotropes or vasoactive medic.\r\n3 ICTs",
+        "score_system": "EUROSCORE_II",
+        "risk_score": 1,
+        "cause_of_admission": "POC after CABG",
+        "consultant": []
+    }
+},
+{
+    "model": "emr.admission",
+    "pk": 3,
+    "fields": {
+        "date": "2017-02-18",
+        "patient": 4,
+        "transfer_to": "ICU3",
+        "transfer_from": "OR",
+        "status_on_transfer": "r",
+        "score_system": "EUROSCORE_II",
+        "risk_score": 1,
+        "cause_of_admission": "post-operative",
+        "consultant": []
+    }
+},
+{
+    "model": "emr.admission",
+    "pk": 4,
+    "fields": {
+        "date": "2017-02-19",
+        "patient": 5,
+        "transfer_to": "ICU3",
+        "transfer_from": "WRD",
+        "status_on_transfer": "rapid AF\r\nbp: 110/70\r\nHR: 160",
+        "score_system": "APACHE_II",
+        "risk_score": 1,
+        "cause_of_admission": "atrial fibrillation following CABG",
+        "consultant": []
+    }
+},
+{
+    "model": "emr.admission",
+    "pk": 5,
+    "fields": {
+        "date": "2017-02-15",
+        "patient": 6,
+        "transfer_to": "ICU3",
+        "transfer_from": "OTHR",
+        "status_on_transfer": ".",
+        "score_system": "APACHE_II",
+        "risk_score": 6,
+        "cause_of_admission": "liver cell failure , due to toxemia",
+        "consultant": []
+    }
+},
+{
+    "model": "emr.admission",
+    "pk": 6,
+    "fields": {
+        "date": "2017-02-17",
+        "patient": 7,
+        "transfer_to": "ICU3",
+        "transfer_from": "OR",
+        "status_on_transfer": ".",
+        "score_system": "EUROSCORE_II",
+        "risk_score": 1,
+        "cause_of_admission": "post-operative",
+        "consultant": []
+    }
+},
+{
+    "model": "emr.admission",
+    "pk": 7,
+    "fields": {
+        "date": "2017-02-19",
+        "patient": 8,
+        "transfer_to": "ICU3",
+        "transfer_from": "OR",
+        "status_on_transfer": "0",
+        "score_system": "EUROSCORE_II",
+        "risk_score": 1,
+        "cause_of_admission": "post-operative",
+        "consultant": []
+    }
+},
+{
+    "model": "emr.admission",
+    "pk": 8,
+    "fields": {
+        "date": "2017-02-19",
+        "patient": 9,
+        "transfer_to": "ICU3",
+        "transfer_from": "OR",
+        "status_on_transfer": "-Patient admitted at 12 pm, unconscious, mechanically ventilated. No inotropic support. \r\n- 4 ICTs \r\nHr : 85 bpm NSR\r\nBP: 130/80 mmHg\r\nCVP: -1 cmH2O",
+        "score_system": "EUROSCORE_II",
+        "risk_score": 1,
+        "cause_of_admission": "Post Operative care",
+        "consultant": []
+    }
+},
+{
+    "model": "emr.admission",
+    "pk": 9,
+    "fields": {
+        "date": "2017-02-19",
+        "patient": 10,
+        "transfer_to": "ICU3",
+        "transfer_from": "OR",
+        "status_on_transfer": "Patient admitted at 2 pm, unconscious, mechanically ventilated. \r\non Adrenaline 4 cc/hr AND NE 4 cc/hr.\r\n2 retrosternal chest tubes and 1 left pleural chest tube",
+        "score_system": "EUROSCORE_II",
+        "risk_score": 1,
+        "cause_of_admission": "Post Operative care",
+        "consultant": []
+    }
+},
+{
+    "model": "emr.admission",
+    "pk": 10,
+    "fields": {
+        "date": "2017-02-19",
+        "patient": 11,
+        "transfer_to": "ICU3",
+        "transfer_from": "OR",
+        "status_on_transfer": "Patient admitted at 3 am, unconscious, mechanically ventilated. No inotropic support.\r\n2 retrosternal chest tubes with no significant drainage on admission.\r\non GTN 5cc/hr, BP 130/75 mmHg",
+        "score_system": "EUROSCORE_II",
+        "risk_score": 1,
+        "cause_of_admission": "Post Operative care",
+        "consultant": []
+    }
+},
+{
+    "model": "emr.admission",
+    "pk": 12,
+    "fields": {
+        "date": "2017-02-19",
+        "patient": 14,
+        "transfer_to": "ICU3",
+        "transfer_from": "OR",
+        "status_on_transfer": "patient admitted unconscious \r\nintubated mechanically ventilated\r\nno inotropic support \r\nvitals and hemodynamics within normal limits",
+        "score_system": "EUROSCORE_II",
+        "risk_score": 1,
+        "cause_of_admission": "Post Operative care",
+        "consultant": []
+    }
+},
+{
+    "model": "emr.admission",
+    "pk": 13,
+    "fields": {
+        "date": "2017-02-17",
+        "patient": 15,
+        "transfer_to": "ICU3",
+        "transfer_from": "OR",
+        "status_on_transfer": "intubated mechanically ventilated\r\nnot yet recovered from anaesthesia\r\noff inotropes and vasoactibe drugs",
+        "score_system": "EUROSCORE_II",
+        "risk_score": 1,
+        "cause_of_admission": "poc following Tyrone-David operation",
+        "consultant": []
+    }
+},
+{
+    "model": "emr.discharge",
+    "pk": 1,
+    "fields": {
+        "date": "2017-02-16",
+        "patient": 2,
+        "transfer_to": "WRD",
+        "transfer_from": "ICU3",
+        "status_on_transfer": "fully consious hemodynamically stable\r\nHR 90  BP 130/80\r\nsinus rythm\r\n\r\nchest auscultation...free of significant abnormality\r\n\r\nCVL, chest tubes and urinary catheters removed",
+        "admission": 2,
+        "mortality": false,
+        "recommendations": "\u0642\u064a\u0627\u0633 \u0646 \u0636 \u062d /\u0668 \u0633\u0627\u0639\u0627\u062a\r\n\u0642\u064a\u0627\u0633 \u0633\u0643\u0631 / \u0666 \u0633\u0627\u0639\u0627\u062a \u0645\u0639 \u0627\u0639\u0637\u0627\u0621 \u0627\u0646\u0633\u0648\u0644\u064a\u0646 \u0645\u0627\u0626\u064a \u062d\u0633\u0628 \u0627\u0644\u062c\u062f\u0648\u0644\r\n\u0627\u0644\u0639\u0644\u0627\u062c\r\n\u062a\u064a\u0646\u0627\u0645 \u0665\u0660\u0660\u0645\u062c\u0645 /\u0668 \u0633\u0627\u0639\u0627\u062a\r\n\u0643\u0646\u062a\u0631\u0648\u0644\u0643 \u0664\u0660\u0645\u062c\u0645 / \u0668 \u0633\u0627\u0639\u0627\u062a  \u0627\u0642\u0631\u0627\u0635\r\n\u0628\u0644\u0627\u0641\u0643\u0633 \u0667\u0665 \u0645\u062c\u0645 \u064a\u0648\u0645\u064a\u0627\r\n\u0643\u0648\u0646\u0643\u0648\u0631 \u0662,\u0665 \u0645\u062c\u0645 \u064a\u0648\u0645\u064a\u0627\r\n\u0643\u0644\u0643\u0633\u0627\u0646 \u0664\u0660 \u0645\u062c\u0645 \u062a\u062d\u062a \u0627\u0644\u062c\u0644\u062f / \u0662\u0664 \u0633\u0627\u0639\u0629\r\n\u0627\u062a\u0631\u0648\u0641\u0646\u062a \u0660,\u0662\u0665 /  \u0633\u0627\u0639\u0627\u062a"
+    }
+},
+{
+    "model": "emr.discharge",
+    "pk": 2,
+    "fields": {
+        "date": "2017-02-19",
+        "patient": 8,
+        "transfer_to": "WRD",
+        "transfer_from": "ICU3",
+        "status_on_transfer": "##",
+        "admission": 7,
+        "mortality": false,
+        "recommendations": "##"
+    }
+},
+{
+    "model": "emr.discharge",
+    "pk": 3,
+    "fields": {
+        "date": "2017-02-19",
+        "patient": 5,
+        "transfer_to": "WRD",
+        "transfer_from": "ICU3",
+        "status_on_transfer": "##",
+        "admission": 4,
+        "mortality": false,
+        "recommendations": "##"
+    }
+},
+{
+    "model": "emr.discharge",
+    "pk": 4,
+    "fields": {
+        "date": "2017-02-19",
+        "patient": 7,
+        "transfer_to": "WRD",
+        "transfer_from": "ICU3",
+        "status_on_transfer": "Patient is fully conscious, oriented and afebrile.\r\nHR: 90 NSR\r\nBP: 130/70 mmHg\r\nO2Sats: 99%\r\nICTs removed on discharge",
+        "admission": 6,
+        "mortality": false,
+        "recommendations": "-"
+    }
+},
+{
+    "model": "emr.discharge",
+    "pk": 5,
+    "fields": {
+        "date": "2017-02-20",
+        "patient": 1,
+        "transfer_to": "MORT",
+        "transfer_from": "ICU3",
+        "status_on_transfer": "-",
+        "admission": 1,
+        "mortality": true,
+        "recommendations": "-"
+    }
+},
+{
+    "model": "emr.note",
+    "pk": 1,
+    "fields": {
+        "date": "2017-02-19",
+        "patient": 4,
+        "admission": 3,
+        "physician": 19,
+        "sofa_score": 1,
+        "status": "drain\r\n350 1st hour\r\n350 2nd+ 3rd \r\n1 fresh blood + 1 ffp transfused \r\nlevo= 6 ml/hr",
+        "plan": "nn",
+        "events": "bp droped 80/50"
+    }
+},
+{
+    "model": "emr.note",
+    "pk": 2,
+    "fields": {
+        "date": "2017-02-19",
+        "patient": 5,
+        "admission": 4,
+        "physician": 19,
+        "sofa_score": null,
+        "status": "pt is fully conscious \r\nHR : 80 \r\nbp: 130/80\r\non room air \r\nAF= amiodaron",
+        "plan": "oral cordaron started at 6 am",
+        "events": "."
+    }
+},
+{
+    "model": "emr.note",
+    "pk": 3,
+    "fields": {
+        "date": "2017-02-19",
+        "patient": 6,
+        "admission": 5,
+        "physician": 19,
+        "sofa_score": 1,
+        "status": "on adm:\r\nextubated . confused , vitally stable \r\nbp: 130/60\r\nhr: 110\r\noxygen mask \r\nhyperglycemic",
+        "plan": ".",
+        "events": "."
+    }
+},
+{
+    "model": "emr.note",
+    "pk": 4,
+    "fields": {
+        "date": "2017-02-19",
+        "patient": 7,
+        "admission": 6,
+        "physician": 19,
+        "sofa_score": null,
+        "status": "fully conscious \r\nvitally stable \r\nKcl replacment \r\ncordaron 2.5 1x1 \r\ncapoten 25 1x3",
+        "plan": ".",
+        "events": "."
+    }
+},
+{
+    "model": "emr.note",
+    "pk": 5,
+    "fields": {
+        "date": "2017-02-19",
+        "patient": 8,
+        "admission": 7,
+        "physician": 19,
+        "sofa_score": null,
+        "status": "18/2\r\nbp : 110/80\r\nHR: 160",
+        "plan": "consider norvasc 5mg \r\n++ GTN\r\nmonitoring rythm \r\nbronchodilators \r\ninsulin inf -off",
+        "events": "."
+    }
+},
+{
+    "model": "emr.note",
+    "pk": 6,
+    "fields": {
+        "date": "2017-02-18",
+        "patient": 1,
+        "admission": 1,
+        "physician": 19,
+        "sofa_score": null,
+        "status": "disturbed \r\nHR: 140\r\nbp: 90/60\r\n\r\nfeverish",
+        "plan": "hold marivan",
+        "events": "bp dropped maintained by levo"
+    }
+},
+{
+    "model": "emr.note",
+    "pk": 7,
+    "fields": {
+        "date": "2017-02-19",
+        "patient": 4,
+        "admission": 3,
+        "physician": 15,
+        "sofa_score": null,
+        "status": "Patient was #re-opened to evacuate moderate pericardial collection.# Re-admitted at 11 am, unconscious, mechanically ventilated via ETT, on NE 2 cc/hr, hemodynamically maintained. \r\nABG showed #metabolic acidosis#, Sodium Bicarb was administered, and NE was raised to 4 cc/hr.\r\nCVP +2 cmH2O\r\n- Patient regained full consciousness as well as full motor power, #Extubated smoothly# at 3 pm.\r\n- #Dialysis session was carried on# at 11 pm, no UF.\r\n- #NE was increased to 8 cc/hr# on dialysis.\r\n- HR 90 bpm NSR, BP: 130/80 mmHg, CVP +7",
+        "plan": "- Monitor vitals and hemodynamics.\r\n- Add targocid 400 mg Q12H for 3 doses then 400 mg Q72H.\r\n- Gradually wean off NE.",
+        "events": "- Re-addmission from OR\r\n- Extubation.\r\n- Hypotension -> volume administered -> blood pressure back to normal.\r\n- Dialysis"
+    }
+},
+{
+    "model": "emr.note",
+    "pk": 8,
+    "fields": {
+        "date": "2017-02-19",
+        "patient": 9,
+        "admission": 8,
+        "physician": 15,
+        "sofa_score": null,
+        "status": "\"Patient was managed by Dr. Hisham Khalaf\"",
+        "plan": "Monitor vitals and hemodynamics.\r\nContinue NE weaning\r\nfollow up chest tubes",
+        "events": "- Chest tubes drained 300 cc in the first 2 hours. then became static.\r\n- Patient extubated smoothly at 3 pm.\r\n- Chest tube drainage continued to drain 100 cc/hr. At 8 pm 200 cc drained and the # total drainage increased to 1050 cc in 8 hours.#\r\nSurgical team were informed, and decision was taken to # resuscitate with PRBCs, FFP and fluids#, and follow up.\r\n#Blood pressure dropped to 80/45 mmHg. # #NE IVI initiated 5 cc/hr.# Blood pressure controlled.\r\nHb level rised to 10.8 gm/dl.\r\nNE gradually decreased to 2 cc/hr."
+    }
+},
+{
+    "model": "emr.note",
+    "pk": 9,
+    "fields": {
+        "date": "2017-02-19",
+        "patient": 10,
+        "admission": 9,
+        "physician": 15,
+        "sofa_score": null,
+        "status": "Patient is fully conscious, good motor power. \r\nvitals and hemodynamics maintained on Adrenaline and NE infusions.\r\nStill mechanically ventilated.\r\nMetabolic acidosis",
+        "plan": "- Continue weaning of Adrenaline to off.\r\n- Start then weaning NE till 5 cc/hr.\r\n- If fitting criteria of extubation, then extubate",
+        "events": "- Patient's #Hb on admission was 5.7 gm/dl#\r\n- #Blood pressure dropped to 80/50 mmHg#\r\n- #NE was increased to 10 cc/hr and Adrenaline to 6 cc/hr#.\r\n- #2 units of blood were administered#.\r\n- follow up #Hb level : 8.3#"
+    }
+},
+{
+    "model": "emr.note",
+    "pk": 10,
+    "fields": {
+        "date": "2017-02-19",
+        "patient": 1,
+        "admission": 1,
+        "physician": 15,
+        "sofa_score": null,
+        "status": "Patient Deceased",
+        "plan": "-",
+        "events": "Patient Arrested with severe Respiratory Acidosis at 11 pm. pH 6.9, PCO2 105 mmHg\r\nCPR done for one cycle, she got back to normal rhythm.\r\nPatient Arrested again with severe Respiratory Acidosis, at 4 am, pH >6.8, PCO2 110 mmHg\r\nProtocol of Resuscitation followed, but patient deceased."
+    }
+},
+{
+    "model": "emr.note",
+    "pk": 11,
+    "fields": {
+        "date": "2017-02-19",
+        "patient": 11,
+        "admission": 10,
+        "physician": 15,
+        "sofa_score": null,
+        "status": "Patient still not recovered yet from anesthesia\r\nstill on MV\r\nGTN raised to 7 cc/hr to overcome shooting blood pressure.\r\nno significant chest tubes drainage.",
+        "plan": "- follow up conscious level and motor power, and assess for extubation.\r\n- switch to oral anti-hypertensives and wean off IV nitrates.\r\n- CXR to follow up.",
+        "events": "Still on MV \r\nblood pressure rised to 160/90 mmHg\r\nanxiolytics were administered and GTN infusion rate increased."
+    }
+},
+{
+    "model": "emr.radiology",
+    "pk": 1,
+    "fields": {
+        "patient": 2,
+        "operator": null,
+        "date": "2017-02-06T00:00:00Z",
+        "modality": "XRAY",
+        "region": "chest",
+        "with_contrast": false,
+        "center": "Elmanial",
+        "image": "14870752776621008531918.jpg",
+        "impression": "Normal CXR"
     }
 },
 {
@@ -339,6 +1058,296 @@
         "time": "2017-02-12T01:00:00Z",
         "lab": 1,
         "result": "50.00"
+    }
+},
+{
+    "model": "emr.patient_lab_quant",
+    "pk": 72,
+    "fields": {
+        "patient": 2,
+        "time": "2017-02-12T01:00:00Z",
+        "lab": 12,
+        "result": "6.20"
+    }
+},
+{
+    "model": "emr.patient_lab_quant",
+    "pk": 77,
+    "fields": {
+        "patient": 2,
+        "time": "2017-02-12T01:00:00Z",
+        "lab": 11,
+        "result": "10.10"
+    }
+},
+{
+    "model": "emr.patient_lab_quant",
+    "pk": 83,
+    "fields": {
+        "patient": 2,
+        "time": "2017-02-12T01:00:00Z",
+        "lab": 13,
+        "result": "241.00"
+    }
+},
+{
+    "model": "emr.patient_lab_quant",
+    "pk": 86,
+    "fields": {
+        "patient": 2,
+        "time": "2017-02-12T01:00:00Z",
+        "lab": 2,
+        "result": "1.30"
+    }
+},
+{
+    "model": "emr.patient_lab_quant",
+    "pk": 96,
+    "fields": {
+        "patient": 2,
+        "time": "2017-02-14T11:30:00Z",
+        "lab": 15,
+        "result": "74.00"
+    }
+},
+{
+    "model": "emr.patient_lab_quant",
+    "pk": 99,
+    "fields": {
+        "patient": 2,
+        "time": "2017-02-14T11:30:00Z",
+        "lab": 17,
+        "result": "39.20"
+    }
+},
+{
+    "model": "emr.patient_lab_quant",
+    "pk": 100,
+    "fields": {
+        "patient": 2,
+        "time": "2017-02-14T11:30:00Z",
+        "lab": 11,
+        "result": "10.50"
+    }
+},
+{
+    "model": "emr.patient_lab_quant",
+    "pk": 103,
+    "fields": {
+        "patient": 2,
+        "time": "2017-02-14T11:30:00Z",
+        "lab": 14,
+        "result": "15.00"
+    }
+},
+{
+    "model": "emr.patient_lab_quant",
+    "pk": 107,
+    "fields": {
+        "patient": 2,
+        "time": "2017-02-14T11:30:00Z",
+        "lab": 16,
+        "result": "1.21"
+    }
+},
+{
+    "model": "emr.patient_lab_quant",
+    "pk": 124,
+    "fields": {
+        "patient": 6,
+        "time": "2017-02-19T01:00:00Z",
+        "lab": 1,
+        "result": "55.00"
+    }
+},
+{
+    "model": "emr.patient_lab_quant",
+    "pk": 141,
+    "fields": {
+        "patient": 8,
+        "time": "2017-02-19T01:00:00Z",
+        "lab": 13,
+        "result": "155.00"
+    }
+},
+{
+    "model": "emr.patient_lab_quant",
+    "pk": 142,
+    "fields": {
+        "patient": 8,
+        "time": "2017-02-19T01:00:00Z",
+        "lab": 11,
+        "result": "11.20"
+    }
+},
+{
+    "model": "emr.patient_lab_quant",
+    "pk": 144,
+    "fields": {
+        "patient": 8,
+        "time": "2017-02-19T01:00:00Z",
+        "lab": 14,
+        "result": "15.40"
+    }
+},
+{
+    "model": "emr.patient_lab_quant",
+    "pk": 147,
+    "fields": {
+        "patient": 8,
+        "time": "2017-02-19T01:00:00Z",
+        "lab": 1,
+        "result": "114.00"
+    }
+},
+{
+    "model": "emr.patient_lab_quant",
+    "pk": 149,
+    "fields": {
+        "patient": 8,
+        "time": "2017-02-19T01:00:00Z",
+        "lab": 16,
+        "result": "1.26"
+    }
+},
+{
+    "model": "emr.patient_lab_quant",
+    "pk": 150,
+    "fields": {
+        "patient": 8,
+        "time": "2017-02-19T01:00:00Z",
+        "lab": 15,
+        "result": "71.00"
+    }
+},
+{
+    "model": "emr.patient_lab_quant",
+    "pk": 151,
+    "fields": {
+        "patient": 8,
+        "time": "2017-02-19T01:00:00Z",
+        "lab": 12,
+        "result": "8.70"
+    }
+},
+{
+    "model": "emr.patient_lab_quant",
+    "pk": 152,
+    "fields": {
+        "patient": 8,
+        "time": "2017-02-19T01:00:00Z",
+        "lab": 2,
+        "result": "1.50"
+    }
+},
+{
+    "model": "emr.patient_lab_quant",
+    "pk": 164,
+    "fields": {
+        "patient": 1,
+        "time": "2017-02-19T01:00:00Z",
+        "lab": 13,
+        "result": "64.00"
+    }
+},
+{
+    "model": "emr.patient_lab_quant",
+    "pk": 165,
+    "fields": {
+        "patient": 1,
+        "time": "2017-02-19T01:00:00Z",
+        "lab": 11,
+        "result": "8.20"
+    }
+},
+{
+    "model": "emr.patient_lab_quant",
+    "pk": 167,
+    "fields": {
+        "patient": 1,
+        "time": "2017-02-19T01:00:00Z",
+        "lab": 14,
+        "result": "17.80"
+    }
+},
+{
+    "model": "emr.patient_lab_quant",
+    "pk": 170,
+    "fields": {
+        "patient": 1,
+        "time": "2017-02-19T01:00:00Z",
+        "lab": 1,
+        "result": "0.60"
+    }
+},
+{
+    "model": "emr.patient_lab_quant",
+    "pk": 172,
+    "fields": {
+        "patient": 1,
+        "time": "2017-02-19T01:00:00Z",
+        "lab": 16,
+        "result": "1.50"
+    }
+},
+{
+    "model": "emr.patient_lab_quant",
+    "pk": 173,
+    "fields": {
+        "patient": 1,
+        "time": "2017-02-19T01:00:00Z",
+        "lab": 15,
+        "result": "55.00"
+    }
+},
+{
+    "model": "emr.patient_lab_quant",
+    "pk": 174,
+    "fields": {
+        "patient": 1,
+        "time": "2017-02-19T01:00:00Z",
+        "lab": 12,
+        "result": "21.00"
+    }
+},
+{
+    "model": "emr.patient_lab_quant",
+    "pk": 180,
+    "fields": {
+        "patient": 4,
+        "time": "2017-02-19T01:00:00Z",
+        "lab": 5,
+        "result": "0.60"
+    }
+},
+{
+    "model": "emr.patient_lab_quant",
+    "pk": 193,
+    "fields": {
+        "patient": 4,
+        "time": "2017-02-19T01:00:00Z",
+        "lab": 1,
+        "result": "134.00"
+    }
+},
+{
+    "model": "emr.patient_lab_quant",
+    "pk": 194,
+    "fields": {
+        "patient": 4,
+        "time": "2017-02-19T01:00:00Z",
+        "lab": 6,
+        "result": "0.20"
+    }
+},
+{
+    "model": "emr.patient_lab_quant",
+    "pk": 198,
+    "fields": {
+        "patient": 4,
+        "time": "2017-02-19T01:00:00Z",
+        "lab": 2,
+        "result": "6.20"
     }
 },
 {
@@ -963,19 +1972,631 @@
     }
 },
 {
+    "model": "auth.permission",
+    "pk": 70,
+    "fields": {
+        "name": "Can add user",
+        "content_type": 4,
+        "codename": "add_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 71,
+    "fields": {
+        "name": "Can change user",
+        "content_type": 4,
+        "codename": "change_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 72,
+    "fields": {
+        "name": "Can delete user",
+        "content_type": 4,
+        "codename": "delete_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 73,
+    "fields": {
+        "name": "Can add group",
+        "content_type": 3,
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 74,
+    "fields": {
+        "name": "Can change group",
+        "content_type": 3,
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 75,
+    "fields": {
+        "name": "Can delete group",
+        "content_type": 3,
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 76,
+    "fields": {
+        "name": "Can add surgery",
+        "content_type": 23,
+        "codename": "add_surgery"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 77,
+    "fields": {
+        "name": "Can change surgery",
+        "content_type": 23,
+        "codename": "change_surgery"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 78,
+    "fields": {
+        "name": "Can delete surgery",
+        "content_type": 23,
+        "codename": "delete_surgery"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 79,
+    "fields": {
+        "name": "Can add patient_ lab_quant",
+        "content_type": 14,
+        "codename": "add_patient_lab_quant"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 80,
+    "fields": {
+        "name": "Can change patient_ lab_quant",
+        "content_type": 14,
+        "codename": "change_patient_lab_quant"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 81,
+    "fields": {
+        "name": "Can delete patient_ lab_quant",
+        "content_type": 14,
+        "codename": "delete_patient_lab_quant"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 82,
+    "fields": {
+        "name": "Can add lab_quant",
+        "content_type": 8,
+        "codename": "add_lab_quant"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 83,
+    "fields": {
+        "name": "Can change lab_quant",
+        "content_type": 8,
+        "codename": "change_lab_quant"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 84,
+    "fields": {
+        "name": "Can delete lab_quant",
+        "content_type": 8,
+        "codename": "delete_lab_quant"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 85,
+    "fields": {
+        "name": "Can add patient_ lab_qual",
+        "content_type": 15,
+        "codename": "add_patient_lab_qual"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 86,
+    "fields": {
+        "name": "Can change patient_ lab_qual",
+        "content_type": 15,
+        "codename": "change_patient_lab_qual"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 87,
+    "fields": {
+        "name": "Can delete patient_ lab_qual",
+        "content_type": 15,
+        "codename": "delete_patient_lab_qual"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 88,
+    "fields": {
+        "name": "Can add physician",
+        "content_type": 18,
+        "codename": "add_physician"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 89,
+    "fields": {
+        "name": "Can change physician",
+        "content_type": 18,
+        "codename": "change_physician"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 90,
+    "fields": {
+        "name": "Can delete physician",
+        "content_type": 18,
+        "codename": "delete_physician"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 91,
+    "fields": {
+        "name": "Can add culture",
+        "content_type": 12,
+        "codename": "add_culture"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 92,
+    "fields": {
+        "name": "Can change culture",
+        "content_type": 12,
+        "codename": "change_culture"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 93,
+    "fields": {
+        "name": "Can delete culture",
+        "content_type": 12,
+        "codename": "delete_culture"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 94,
+    "fields": {
+        "name": "Can add lab_qual",
+        "content_type": 7,
+        "codename": "add_lab_qual"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 95,
+    "fields": {
+        "name": "Can change lab_qual",
+        "content_type": 7,
+        "codename": "change_lab_qual"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 96,
+    "fields": {
+        "name": "Can delete lab_qual",
+        "content_type": 7,
+        "codename": "delete_lab_qual"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 97,
+    "fields": {
+        "name": "Can add history",
+        "content_type": 13,
+        "codename": "add_history"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 98,
+    "fields": {
+        "name": "Can change history",
+        "content_type": 13,
+        "codename": "change_history"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 99,
+    "fields": {
+        "name": "Can delete history",
+        "content_type": 13,
+        "codename": "delete_history"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 100,
+    "fields": {
+        "name": "Can add radiology",
+        "content_type": 9,
+        "codename": "add_radiology"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 101,
+    "fields": {
+        "name": "Can change radiology",
+        "content_type": 9,
+        "codename": "change_radiology"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 102,
+    "fields": {
+        "name": "Can delete radiology",
+        "content_type": 9,
+        "codename": "delete_radiology"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 103,
+    "fields": {
+        "name": "Can add note",
+        "content_type": 20,
+        "codename": "add_note"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 104,
+    "fields": {
+        "name": "Can change note",
+        "content_type": 20,
+        "codename": "change_note"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 105,
+    "fields": {
+        "name": "Can delete note",
+        "content_type": 20,
+        "codename": "delete_note"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 106,
+    "fields": {
+        "name": "Can add discharge",
+        "content_type": 11,
+        "codename": "add_discharge"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 107,
+    "fields": {
+        "name": "Can change discharge",
+        "content_type": 11,
+        "codename": "change_discharge"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 108,
+    "fields": {
+        "name": "Can delete discharge",
+        "content_type": 11,
+        "codename": "delete_discharge"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 109,
+    "fields": {
+        "name": "Can add fluid_analysis",
+        "content_type": 16,
+        "codename": "add_fluid_analysis"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 110,
+    "fields": {
+        "name": "Can change fluid_analysis",
+        "content_type": 16,
+        "codename": "change_fluid_analysis"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 111,
+    "fields": {
+        "name": "Can delete fluid_analysis",
+        "content_type": 16,
+        "codename": "delete_fluid_analysis"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 112,
+    "fields": {
+        "name": "Can add admission",
+        "content_type": 19,
+        "codename": "add_admission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 113,
+    "fields": {
+        "name": "Can change admission",
+        "content_type": 19,
+        "codename": "change_admission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 114,
+    "fields": {
+        "name": "Can delete admission",
+        "content_type": 19,
+        "codename": "delete_admission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 115,
+    "fields": {
+        "name": "Can add patient",
+        "content_type": 10,
+        "codename": "add_patient"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 116,
+    "fields": {
+        "name": "Can change patient",
+        "content_type": 10,
+        "codename": "change_patient"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 117,
+    "fields": {
+        "name": "Can delete patient",
+        "content_type": 10,
+        "codename": "delete_patient"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 118,
+    "fields": {
+        "name": "Can add interventional_ radiology",
+        "content_type": 22,
+        "codename": "add_interventional_radiology"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 119,
+    "fields": {
+        "name": "Can change interventional_ radiology",
+        "content_type": 22,
+        "codename": "change_interventional_radiology"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 120,
+    "fields": {
+        "name": "Can delete interventional_ radiology",
+        "content_type": 22,
+        "codename": "delete_interventional_radiology"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 121,
+    "fields": {
+        "name": "Can add echocardiography",
+        "content_type": 21,
+        "codename": "add_echocardiography"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 122,
+    "fields": {
+        "name": "Can change echocardiography",
+        "content_type": 21,
+        "codename": "change_echocardiography"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 123,
+    "fields": {
+        "name": "Can delete echocardiography",
+        "content_type": 21,
+        "codename": "delete_echocardiography"
+    }
+},
+{
     "model": "auth.user",
     "pk": 1,
     "fields": {
         "password": "pbkdf2_sha256$30000$O91NuqdMddlH$OLk866/ZRw3uEfPozG1q70CDjn++uEOKJO7aTg3yC0Y=",
-        "last_login": "2017-02-13T14:23:05.606Z",
+        "last_login": "2017-02-20T10:05:31.781Z",
         "is_superuser": true,
         "username": "ibrahim",
-        "first_name": "",
-        "last_name": "",
+        "first_name": "\u0627\u0628\u0631\u0627\u0647\u064a\u0645",
+        "last_name": "\u0639\u0644\u064a",
         "email": "",
         "is_staff": true,
         "is_active": true,
-        "date_joined": "2017-02-13T14:21:32.892Z",
+        "date_joined": "2017-02-13T14:21:32Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$30000$Xlyw9rNa8gtg$YDmXXKgxZjIkGI+1dt2FSxD95SCEFEy4WuuqM+HQxas=",
+        "last_login": "2017-02-18T11:27:32Z",
+        "is_superuser": false,
+        "username": "AMIN",
+        "first_name": "\u0627\u062d\u0645\u062f",
+        "last_name": "\u0627\u0645\u064a\u0646",
+        "email": "drahmedamin16@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2017-02-14T12:26:00Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$30000$GNuJN6e2298S$XKR+r+ZnudQM8Yp902sbjO29r1xr7nBn0JPd1whW2Rg=",
+        "last_login": "2017-02-15T04:17:06Z",
+        "is_superuser": false,
+        "username": "mezohisham",
+        "first_name": "\u0645\u0639\u062a\u0632",
+        "last_name": "\u0639\u0637\u0648\u0627\u0646",
+        "email": "moatazatwan@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2017-02-14T12:28:54Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 4,
+    "fields": {
+        "password": "pbkdf2_sha256$30000$lZ3f7P5VatLX$YafnxbBLcob6tXLw3EQzyu4Hi3/m76Ne0nwUkHQfOaU=",
+        "last_login": "2017-02-19T22:37:06Z",
+        "is_superuser": false,
+        "username": "sobhy",
+        "first_name": "\u0645\u062d\u0645\u0648\u062f",
+        "last_name": "\u0635\u0628\u062d\u064a",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2017-02-17T13:57:33Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 5,
+    "fields": {
+        "password": "pbkdf2_sha256$30000$HxP2HxNi8tv4$P5Fa+vJhuEPvTN9TSMBSLzJHKt5xrnrtOgoj9xbxgJc=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "arfeen",
+        "first_name": "\u0639\u0644\u0627\u0621",
+        "last_name": "\u0639\u0627\u0631\u0641\u064a\u0646",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2017-02-17T14:00:04Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 6,
+    "fields": {
+        "password": "pbkdf2_sha256$30000$3HsDZdmzUib6$/VvGj8/XG08cNfl+78+Q5E3WSm5ACdZ3Cm78D8OtL0A=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "abdelbaqy",
+        "first_name": "\u0627\u062d\u0645\u062f",
+        "last_name": "\u0639\u0628\u062f\u0627\u0644\u0628\u0627\u0642\u064a",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2017-02-17T14:08:57Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 7,
+    "fields": {
+        "password": "pbkdf2_sha256$30000$5iYIS7J8XVjT$iEyJeFd6XonFpmpjtt8WKBJB1rDnRhtDjvblIr3BtVI=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "salah",
+        "first_name": "\u0645\u062d\u0645\u062f",
+        "last_name": "\u062d\u0633\u064a\u0646",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2017-02-17T14:10:05Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 8,
+    "fields": {
+        "password": "pbkdf2_sha256$30000$uGCMBQMjnrki$XQNOvRRSs45UhJSewGIlxka++aBasyJjLly/pO9mmwE=",
+        "last_login": "2017-02-19T05:33:41Z",
+        "is_superuser": false,
+        "username": "asim",
+        "first_name": "\u0639\u0627\u0635\u0645",
+        "last_name": "\u0631\u0628\u064a\u0639",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2017-02-17T14:11:07Z",
         "groups": [],
         "user_permissions": []
     }
@@ -984,9 +2605,9 @@
     "model": "emr.physician",
     "pk": 1,
     "fields": {
-        "first_name": "",
+        "first_name": "\u0627\u0628\u0631\u0627\u0647\u064a\u0645",
         "middle_name": "",
-        "last_name": "",
+        "last_name": "\u0639\u0644\u064a",
         "sex": "",
         "id_card": null,
         "date_of_birth": null,
@@ -1007,6 +2628,466 @@
         "first_name": "\u0633\u0639\u064a\u062f",
         "middle_name": "",
         "last_name": "\u0639\u0628\u062f \u0627\u0644\u0639\u0632\u064a\u0632",
+        "sex": "M",
+        "id_card": null,
+        "date_of_birth": null,
+        "nationality": "EGY",
+        "phone": "",
+        "address": "",
+        "email": "",
+        "user": null,
+        "speciality": "CTS",
+        "rank": "CN",
+        "graduation_year": null
+    }
+},
+{
+    "model": "emr.physician",
+    "pk": 3,
+    "fields": {
+        "first_name": "\u0645\u0627\u062c\u062f",
+        "middle_name": "\u0639\u0628\u062f \u0627\u0644\u0645\u0633\u064a\u062d",
+        "last_name": "\u0632\u0643\u0631\u064a",
+        "sex": "M",
+        "id_card": null,
+        "date_of_birth": null,
+        "nationality": "EGY",
+        "phone": "",
+        "address": "",
+        "email": "",
+        "user": null,
+        "speciality": "CTS",
+        "rank": "CN",
+        "graduation_year": null
+    }
+},
+{
+    "model": "emr.physician",
+    "pk": 4,
+    "fields": {
+        "first_name": "\u0645\u062d\u0645\u062f",
+        "middle_name": "\u0633\u0639\u062f",
+        "last_name": "\u0647\u062c\u0631\u0633",
+        "sex": "M",
+        "id_card": null,
+        "date_of_birth": null,
+        "nationality": "EGY",
+        "phone": "",
+        "address": "",
+        "email": "",
+        "user": null,
+        "speciality": "CTS",
+        "rank": "CN",
+        "graduation_year": null
+    }
+},
+{
+    "model": "emr.physician",
+    "pk": 5,
+    "fields": {
+        "first_name": "\u0637\u0627\u0631\u0642",
+        "middle_name": "",
+        "last_name": "\u0627\u0644\u0637\u0648\u064a\u0644",
+        "sex": "M",
+        "id_card": null,
+        "date_of_birth": null,
+        "nationality": "EGY",
+        "phone": "",
+        "address": "",
+        "email": "",
+        "user": null,
+        "speciality": "CTS",
+        "rank": "CN",
+        "graduation_year": null
+    }
+},
+{
+    "model": "emr.physician",
+    "pk": 6,
+    "fields": {
+        "first_name": "\u0627\u062d\u0645\u062f",
+        "middle_name": "",
+        "last_name": "\u0627\u0644\u0646\u062c\u0627\u0631",
+        "sex": "M",
+        "id_card": null,
+        "date_of_birth": null,
+        "nationality": "EGY",
+        "phone": "",
+        "address": "",
+        "email": "",
+        "user": null,
+        "speciality": "CTS",
+        "rank": "CN",
+        "graduation_year": null
+    }
+},
+{
+    "model": "emr.physician",
+    "pk": 7,
+    "fields": {
+        "first_name": "\u0627\u062d\u0645\u062f",
+        "middle_name": "",
+        "last_name": "\u0641\u0624\u0627\u062f",
+        "sex": "M",
+        "id_card": null,
+        "date_of_birth": null,
+        "nationality": "EGY",
+        "phone": "",
+        "address": "",
+        "email": "",
+        "user": null,
+        "speciality": "CTS",
+        "rank": "CN",
+        "graduation_year": null
+    }
+},
+{
+    "model": "emr.physician",
+    "pk": 8,
+    "fields": {
+        "first_name": "\u0645\u064a\u0646\u0627",
+        "middle_name": "",
+        "last_name": "\u0633\u0627\u0645\u062d",
+        "sex": "M",
+        "id_card": null,
+        "date_of_birth": null,
+        "nationality": "EGY",
+        "phone": "",
+        "address": "",
+        "email": "",
+        "user": null,
+        "speciality": "CTS",
+        "rank": "CN",
+        "graduation_year": null
+    }
+},
+{
+    "model": "emr.physician",
+    "pk": 9,
+    "fields": {
+        "first_name": "\u0645\u064a\u0646\u0627",
+        "middle_name": "",
+        "last_name": "\u0633\u0627\u0645\u062d",
+        "sex": "M",
+        "id_card": null,
+        "date_of_birth": null,
+        "nationality": "EGY",
+        "phone": "",
+        "address": "",
+        "email": "",
+        "user": null,
+        "speciality": "CTS",
+        "rank": "CN",
+        "graduation_year": null
+    }
+},
+{
+    "model": "emr.physician",
+    "pk": 10,
+    "fields": {
+        "first_name": "\u0645\u064a\u0646\u0627",
+        "middle_name": "",
+        "last_name": "\u0633\u0627\u0645\u062d",
+        "sex": "M",
+        "id_card": null,
+        "date_of_birth": null,
+        "nationality": "EGY",
+        "phone": "",
+        "address": "",
+        "email": "",
+        "user": null,
+        "speciality": "CTS",
+        "rank": "CN",
+        "graduation_year": null
+    }
+},
+{
+    "model": "emr.physician",
+    "pk": 11,
+    "fields": {
+        "first_name": "\u0645\u064a\u0646\u0627",
+        "middle_name": "",
+        "last_name": "\u0633\u0627\u0645\u062d",
+        "sex": "M",
+        "id_card": null,
+        "date_of_birth": null,
+        "nationality": "EGY",
+        "phone": "",
+        "address": "",
+        "email": "",
+        "user": null,
+        "speciality": "CTS",
+        "rank": "CN",
+        "graduation_year": null
+    }
+},
+{
+    "model": "emr.physician",
+    "pk": 12,
+    "fields": {
+        "first_name": "\u0645\u062d\u0645\u062f",
+        "middle_name": "\u0625\u0628\u0631\u0627\u0647\u064a\u0645",
+        "last_name": "\u0633\u0648\u064a\u0644\u0645",
+        "sex": "M",
+        "id_card": null,
+        "date_of_birth": null,
+        "nationality": "EGY",
+        "phone": "0111",
+        "address": "",
+        "email": "",
+        "user": null,
+        "speciality": "CTS",
+        "rank": "CN",
+        "graduation_year": null
+    }
+},
+{
+    "model": "emr.physician",
+    "pk": 13,
+    "fields": {
+        "first_name": "\u0627\u062d\u0645\u062f",
+        "middle_name": "",
+        "last_name": "\u0627\u0645\u064a\u0646",
+        "sex": "",
+        "id_card": null,
+        "date_of_birth": null,
+        "nationality": "EGY",
+        "phone": null,
+        "address": null,
+        "email": "drahmedamin16@gmail.com",
+        "user": 2,
+        "speciality": "",
+        "rank": "",
+        "graduation_year": null
+    }
+},
+{
+    "model": "emr.physician",
+    "pk": 14,
+    "fields": {
+        "first_name": "\u0645\u0639\u062a\u0632",
+        "middle_name": "",
+        "last_name": "\u0639\u0637\u0648\u0627\u0646",
+        "sex": "",
+        "id_card": null,
+        "date_of_birth": null,
+        "nationality": "EGY",
+        "phone": null,
+        "address": null,
+        "email": "moatazatwan@gmail.com",
+        "user": 3,
+        "speciality": "",
+        "rank": "",
+        "graduation_year": null
+    }
+},
+{
+    "model": "emr.physician",
+    "pk": 15,
+    "fields": {
+        "first_name": "\u0645\u062d\u0645\u0648\u062f",
+        "middle_name": "",
+        "last_name": "\u0635\u0628\u062d\u064a",
+        "sex": "",
+        "id_card": null,
+        "date_of_birth": null,
+        "nationality": "EGY",
+        "phone": null,
+        "address": null,
+        "email": "",
+        "user": 4,
+        "speciality": "",
+        "rank": "",
+        "graduation_year": null
+    }
+},
+{
+    "model": "emr.physician",
+    "pk": 16,
+    "fields": {
+        "first_name": "\u0639\u0644\u0627\u0621",
+        "middle_name": "",
+        "last_name": "\u0639\u0627\u0631\u0641\u064a\u0646",
+        "sex": "",
+        "id_card": null,
+        "date_of_birth": null,
+        "nationality": "EGY",
+        "phone": null,
+        "address": null,
+        "email": "",
+        "user": 5,
+        "speciality": "",
+        "rank": "",
+        "graduation_year": null
+    }
+},
+{
+    "model": "emr.physician",
+    "pk": 17,
+    "fields": {
+        "first_name": "\u0627\u062d\u0645\u062f",
+        "middle_name": "",
+        "last_name": "\u0639\u0628\u062f\u0627\u0644\u0628\u0627\u0642\u064a",
+        "sex": "",
+        "id_card": null,
+        "date_of_birth": null,
+        "nationality": "EGY",
+        "phone": null,
+        "address": null,
+        "email": "",
+        "user": 6,
+        "speciality": "",
+        "rank": "",
+        "graduation_year": null
+    }
+},
+{
+    "model": "emr.physician",
+    "pk": 18,
+    "fields": {
+        "first_name": "\u0645\u062d\u0645\u062f",
+        "middle_name": "",
+        "last_name": "\u062d\u0633\u064a\u0646",
+        "sex": "",
+        "id_card": null,
+        "date_of_birth": null,
+        "nationality": "EGY",
+        "phone": null,
+        "address": null,
+        "email": "",
+        "user": 7,
+        "speciality": "",
+        "rank": "",
+        "graduation_year": null
+    }
+},
+{
+    "model": "emr.physician",
+    "pk": 19,
+    "fields": {
+        "first_name": "\u0639\u0627\u0635\u0645",
+        "middle_name": "",
+        "last_name": "\u0631\u0628\u064a\u0639",
+        "sex": "",
+        "id_card": null,
+        "date_of_birth": null,
+        "nationality": "EGY",
+        "phone": null,
+        "address": null,
+        "email": "",
+        "user": 8,
+        "speciality": "",
+        "rank": "",
+        "graduation_year": null
+    }
+},
+{
+    "model": "emr.physician",
+    "pk": 20,
+    "fields": {
+        "first_name": "\u0645\u062d\u0645\u062f",
+        "middle_name": "\u0627\u0628\u0648",
+        "last_name": "\u0627\u0644\u062f\u0647\u0628",
+        "sex": "M",
+        "id_card": null,
+        "date_of_birth": null,
+        "nationality": "EGY",
+        "phone": "",
+        "address": "",
+        "email": "",
+        "user": null,
+        "speciality": "CTS",
+        "rank": "CN",
+        "graduation_year": null
+    }
+},
+{
+    "model": "emr.physician",
+    "pk": 21,
+    "fields": {
+        "first_name": "\u0627\u062d\u0645\u062f.",
+        "middle_name": ".",
+        "last_name": "\u0627\u0644\u0634\u0631\u0642\u0627\u0648\u064a",
+        "sex": "M",
+        "id_card": null,
+        "date_of_birth": null,
+        "nationality": "EGY",
+        "phone": "",
+        "address": "",
+        "email": "",
+        "user": null,
+        "speciality": "CTS",
+        "rank": "CN",
+        "graduation_year": null
+    }
+},
+{
+    "model": "emr.physician",
+    "pk": 22,
+    "fields": {
+        "first_name": "\u0639\u0644\u0627\u0621",
+        "middle_name": "",
+        "last_name": "\u0639\u0645\u0631",
+        "sex": "M",
+        "id_card": null,
+        "date_of_birth": null,
+        "nationality": "EGY",
+        "phone": "",
+        "address": "",
+        "email": "",
+        "user": null,
+        "speciality": "CTS",
+        "rank": "CN",
+        "graduation_year": null
+    }
+},
+{
+    "model": "emr.physician",
+    "pk": 23,
+    "fields": {
+        "first_name": "\u0639\u0644\u0627\u0621",
+        "middle_name": "",
+        "last_name": "\u0639\u0645\u0631",
+        "sex": "M",
+        "id_card": null,
+        "date_of_birth": null,
+        "nationality": "EGY",
+        "phone": "",
+        "address": "",
+        "email": "",
+        "user": null,
+        "speciality": "CTS",
+        "rank": "CN",
+        "graduation_year": null
+    }
+},
+{
+    "model": "emr.physician",
+    "pk": 24,
+    "fields": {
+        "first_name": "\u0639\u0645\u0631\u0648",
+        "middle_name": "",
+        "last_name": "\u0631\u0634\u062f\u064a",
+        "sex": "M",
+        "id_card": 5,
+        "date_of_birth": null,
+        "nationality": "EGY",
+        "phone": "",
+        "address": "",
+        "email": "",
+        "user": null,
+        "speciality": "CTS",
+        "rank": "CN",
+        "graduation_year": null
+    }
+},
+{
+    "model": "emr.physician",
+    "pk": 25,
+    "fields": {
+        "first_name": "\u0639\u0645\u0631\u0648",
+        "middle_name": "",
+        "last_name": "\u0631\u0634\u062f\u064a",
         "sex": "M",
         "id_card": null,
         "date_of_birth": null,
@@ -1317,6 +3398,227 @@
         "object_repr": "Mg",
         "action_flag": 1,
         "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+        "action_time": "2017-02-14T12:26:00.546Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "2",
+        "object_repr": "AMIN",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+        "action_time": "2017-02-14T12:26:50.991Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "2",
+        "object_repr": "AMIN",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"first_name\", \"last_name\", \"email\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+        "action_time": "2017-02-14T12:28:54.477Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "3",
+        "object_repr": "mezohisham",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+        "action_time": "2017-02-14T12:29:50.104Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "3",
+        "object_repr": "mezohisham",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"first_name\", \"last_name\", \"email\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+        "action_time": "2017-02-17T13:57:33.913Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "4",
+        "object_repr": "sobhy",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+        "action_time": "2017-02-17T14:00:05.000Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "5",
+        "object_repr": "arfeen",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+        "action_time": "2017-02-17T14:08:57.707Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "6",
+        "object_repr": "abdelbaqy",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+        "action_time": "2017-02-17T14:10:05.442Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "7",
+        "object_repr": "salah",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+        "action_time": "2017-02-17T14:11:07.856Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "8",
+        "object_repr": "asim",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+        "action_time": "2017-02-20T07:54:58.596Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "6",
+        "object_repr": "abdelbaqy",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"first_name\", \"last_name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+        "action_time": "2017-02-20T07:55:24.308Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "2",
+        "object_repr": "AMIN",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"first_name\", \"last_name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+        "action_time": "2017-02-20T07:55:40.426Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "5",
+        "object_repr": "arfeen",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"first_name\", \"last_name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+        "action_time": "2017-02-20T07:56:01.695Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "8",
+        "object_repr": "asim",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"first_name\", \"last_name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+        "action_time": "2017-02-20T07:56:33.486Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "1",
+        "object_repr": "ibrahim",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"first_name\", \"last_name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+        "action_time": "2017-02-20T07:56:56.717Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "3",
+        "object_repr": "mezohisham",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"first_name\", \"last_name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 39,
+    "fields": {
+        "action_time": "2017-02-20T07:57:15.158Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "7",
+        "object_repr": "salah",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"first_name\", \"last_name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 40,
+    "fields": {
+        "action_time": "2017-02-20T07:57:34.860Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "4",
+        "object_repr": "sobhy",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"first_name\", \"last_name\"]}}]"
     }
 }
 ]
