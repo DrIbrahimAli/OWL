@@ -7,6 +7,7 @@ from .ModelMixins import ProcedureMethods, RadiologyMethods, EchoMethods
 class Radiology(RadiologyMethods, models.Model):
     MODALITIES=[
     ('XRAY','X-ray'),
+    ('FLURO','Fluroscopy'),
     ('CT','CT'),
     ('MRI','MRI'),
     ('US','ultra-sound'),
@@ -16,6 +17,8 @@ class Radiology(RadiologyMethods, models.Model):
     ('brain','Brain'),
     ('neck','Neck'),
     ('heart','Heart'),
+    ('coronary', 'Coronary'),
+    ('vas','Vascular'),
     ('chest','Chest'),
     ]
 

@@ -242,6 +242,10 @@ class RadiologyMethods(PatientUrlMixin):
         else: contrast = ''
         if self.modality == 'US' and self.region =='heart':
             name = 'Echocardiography'
+        elif self.modality == 'FLURO' and self.region =='vas':
+            name = 'Angiography'
+        elif self.modality == 'FLURO' and self.region =='coronary':
+            name = 'Coronary Angiography'
         else:
             name = '{} {}'.format(self.get_region_display(), self.get_modality_display())
         return '{} {} on {}'.format(name, contrast, str(self.date.strftime('%Y/%m/%d')))

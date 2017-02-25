@@ -27,6 +27,7 @@ class PatientManager(models.Manager):
 
 class Patient(PatientMethods, Person):
     ABO=[
+        ('AB','AB'),
         ('A','A'),
         ('B','B'),
         ('O','O')]
@@ -36,7 +37,7 @@ class Patient(PatientMethods, Person):
     serial_no = models.PositiveIntegerField(unique=True)
     weight = models.PositiveIntegerField(null=True,blank=True)
     height = models.PositiveIntegerField(null=True,blank=True)
-    abo_blood=models.CharField(max_length=1, choices=ABO,null=True,blank=True)
+    abo_blood=models.CharField(max_length=2, choices=ABO,null=True,blank=True)
     rh_blood=models.CharField(max_length=1, choices=RH,null=True,blank=True)
     objects= PatientManager()
 

@@ -14,7 +14,9 @@
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="http://localhost:8888/notebooks/Untitled.ipynb?kernel_name=django_extensions"></a>Sensei</li>
+        {% if user.username == 'ibrahim' %}
+        <li><a href="http://localhost:8888/notebooks/Sensei.ipynb?kernel_name=django_extensions">Sensei</a></li>
+        {% endif %}
 <!--        <li><a href="#" onclick="toggle_theme();return false;">Change Theme</a></li>-->
         {%if user.is_authenticated %}
         <li><a href="">logged in as {{user}}</a></li>

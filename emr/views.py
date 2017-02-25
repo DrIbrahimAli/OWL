@@ -22,17 +22,15 @@ class PatientThingViewMixin(LoginRequiredMixin):
 
 class PatientThingCreateMixin(PatientThingViewMixin):
 
-    # def auto_assign(self,request, *args, **kwargs):
-    #     form = self.get_form()
-
 
     def post(self, request, *args, **kwargs):
         form = self.get_form()
         if form.is_valid():
-            patient_thing=form.save(commit=False)
-            patient_thing.patient=Patient.objects.get(pk=kwargs['patient_id'])
-            patient_thing.save()
-            return HttpResponseRedirect(patient_thing.get_absolute_url())
+            self.object = form.save(commit=False)
+            self.object.patient = Patient.objects.get(pk=kwargs['patient_id'])
+            self.object.save()
+            print(self.object)
+            return HttpResponseRedirect(self.get_success_url())
         else:
             return self.form_invalid(form)
 
@@ -68,10 +66,14 @@ class PatientSearch(LoginRequiredMixin, generic.ListView):
                 reduce(operator.and_,
                        (Q(middle_name__icontains=q) for q in query_list)) |
                 reduce(operator.and_,
-                       (Q(last_name__icontains=q) for q in query_list))   
-#                reduce(operator.and_,
-#                      (Q(serial_no=q) for q in query_list))
+                       (Q(last_name__icontains=q) for q in query_list))
             )
+            # try:
+            #     result = result.filter(
+            #     reduce(operator.and_,
+            #     (Q(serial_no=q) for q in query_list))
+            #     )
+            # except: pass
 
         return result
 
@@ -102,6 +104,8 @@ class PatientAdd(LoginRequiredMixin, generic.CreateView):
     form_class= PatientForm
     template_name='emr/patient_related_form.html'
 
+    def get_success_url(self):
+        return reverse('emr:patient_admit',args=(self.object.id,))
 
 class PatientEdit(LoginRequiredMixin, generic.UpdateView):
     model = Patient
@@ -122,6 +126,16 @@ class HistoryEdit(PatientThingViewMixin, generic.UpdateView):
 class PatientAdmit(PatientThingCreateMixin, generic.CreateView):
     model = Admission
     form_class = AdmissionForm
+
+    def get_success_url(self):
+        admission = self.object
+        print(self.object)
+        patient = admission.patient
+        try:
+            history = patient.history
+            return reverse('emr:history_edit',args=(history.pk,))
+        except:
+            return reverse('emr:history_add',args=(patient.pk,))
 
 
 class AdmissionEdit(PatientThingViewMixin, generic.UpdateView):
