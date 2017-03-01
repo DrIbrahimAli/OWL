@@ -1,6 +1,7 @@
 from datetime import date
 import pandas as pd
 import re
+from collections import OrderedDict
 
 from django.db import models
 from django.utils.html import format_html
@@ -115,7 +116,7 @@ class PatientMethods(object):
 
     def get_labs(self):
         try:
-            d={}
+            d = OrderedDict()
             for LAB in self.patient_lab_quant_set.all():
                 if LAB.lab.name not in d.keys():
                     d[LAB.lab.name]=[]
