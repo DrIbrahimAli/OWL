@@ -1,4 +1,6 @@
 from django import forms
+from django.core.exceptions import ValidationError
+
 from .models.patient import *
 from .models.physician import *
 from .models.labs import *
@@ -50,6 +52,21 @@ class DischargeForm(PatientThingFormMixin):
         'date': forms.widgets.SelectDateWidget(years=range(1900,2100))
         }
 
+    def clean(self):
+        super().clean()
+        status = self.cleaned_data.get('status_on_transfer')
+        mortality = self.cleaned_data.get('mortality')
+        recommendations = self.cleaned_data.get('recommendations')
+        print(self.cleaned_data)
+        if mortality:
+            self.cleaned_data.update(
+                status_on_transfer = 'Deceased',
+                recommendations = '',
+                transfer_to = 'MORT'
+            )
+        elif not mortality and (len(recommendations) < 30):
+            # raise ValidationError('are you sure those are all the recommendations!')
+            self.add_error('recommendations', 'are you sure those are all the recommendations')
 
 class NoteForm(PatientThingFormMixin):
     class Meta:

@@ -23,16 +23,12 @@ class PatientThingViewMixin(LoginRequiredMixin):
 class PatientThingCreateMixin(PatientThingViewMixin):
 
 
-    def post(self, request, *args, **kwargs):
-        form = self.get_form()
-        if form.is_valid():
-            self.object = form.save(commit=False)
-            self.object.patient = Patient.objects.get(pk=kwargs['patient_id'])
-            self.object.save()
-            print(self.object)
-            return HttpResponseRedirect(self.get_success_url())
-        else:
-            return self.form_invalid(form)
+    def form_valid(self, form):
+        self.object = form.save(commit=False)
+        self.object.patient = Patient.objects.get(pk=self.kwargs['patient_id'])
+        self.object.save()
+        return super().form_valid(form)
+
 
 class Home(LoginRequiredMixin, generic.ListView):
     template_name = 'emr/home.html'
@@ -67,13 +63,6 @@ class PatientSearch(LoginRequiredMixin, generic.ListView):
                 reduce(operator.and_,
                        (Q(last_name__icontains=q) for q in query_list))
             )
-            # try:
-            #     result = result.filter(
-            #     reduce(operator.and_,
-            #     (Q(serial_no=q) for q in query_list))
-            #     )
-            # except: pass
-
         return result
 
 
@@ -145,17 +134,14 @@ class AdmissionEdit(PatientThingViewMixin, generic.UpdateView):
 class PatientDischarge(PatientThingCreateMixin, generic.CreateView):
     model = Discharge
     form_class= DischargeForm
-    def post(self, request, *args, **kwargs):
-        form = self.get_form()
-        if form.is_valid():
-            patient_thing=form.save(commit=False)
-            patient_thing.patient=Patient.objects.get(pk=kwargs['patient_id'])
-            patient_thing.admission= patient_thing.patient.last_admission()
-            patient_thing.transfer_from= patient_thing.patient.last_admission().transfer_to
-            patient_thing.save()
-            return HttpResponseRedirect(patient_thing.get_absolute_url())
-        else:
-            return self.form_invalid(form)
+
+    def form_valid(self, form):
+        self.object = form.save(commit=False)
+        self.object.patient = Patient.objects.get(pk=self.kwargs['patient_id'])
+        self.object.admission= self.object.patient.last_admission()
+        self.object.transfer_from= self.object.patient.last_admission().transfer_to
+        self.object.save()
+        return super().form_valid(form)
 
 
 class DischargeEdit(PatientThingViewMixin, generic.UpdateView):
@@ -167,22 +153,13 @@ class NoteAdd(PatientThingCreateMixin, generic.CreateView):
     model = Note
     form_class= NoteForm
 
-    # def auto_assign(self,request, *args, **kwargs):
-    #     form = self.get_form()
-    #     patient_thing=form.save(commit=False)
-    #     patient_thing.patient=Patient.objects.get(pk=kwargs['patient_id'])
-    #     patient_thing.save()
-    def post(self, request, *args, **kwargs):
-        form = self.get_form()
-        if form.is_valid():
-            patient_thing = form.save(commit=False)
-            patient_thing.patient = Patient.objects.get(pk=kwargs['patient_id'])
-            patient_thing.admission = patient_thing.patient.last_admission()
-            patient_thing.physician = request.user.physician
-            patient_thing.save()
-            return HttpResponseRedirect(patient_thing.get_absolute_url())
-        else:
-            return self.form_invalid(form)
+    def form_valid(self, form):
+        self.object = form.save(commit=False)
+        self.object.patient = Patient.objects.get(pk=self.kwargs['patient_id'])
+        self.object.admission = self.object.patient.last_admission()
+        self.object.physician = self.request.user.physician
+        self.object.save()
+        return super().form_valid(form)
 
 
 class NoteEdit(PatientThingViewMixin, generic.UpdateView):
@@ -204,18 +181,14 @@ class EchocardiographyAdd(PatientThingCreateMixin, generic.CreateView):
     model = Echocardiography
     form_class= EchocardiographyForm
 
-    def post(self, request, *args, **kwargs):
-        form = self.get_form()
-        if form.is_valid():
-            patient_thing=form.save(commit=False)
-            patient_thing.patient=Patient.objects.get(pk=kwargs['patient_id'])
-            patient_thing.modality= 'US'
-            patient_thing.region= 'heart'
-            patient_thing.with_contrast= False
-            patient_thing.save()
-            return HttpResponseRedirect(patient_thing.get_absolute_url())
-        else:
-            return self.form_invalid(form)
+    def form_valid(self, form):
+        self.object=form.save(commit=False)
+        self.object.patient=Patient.objects.get(pk=self.kwargs['patient_id'])
+        self.object.modality= 'US'
+        self.object.region= 'heart'
+        self.object.with_contrast= False
+        self.object.save()
+        return super().form_valid(form)
 
 
 class EchocardiographyEdit(PatientThingViewMixin, generic.UpdateView):
@@ -294,9 +267,8 @@ def routine_lab(request, patient_id):
                             time=time,
                             patient=patient
                             ).save()
-                        print('done')
                     except:
-                        print('naa')
+                        pass
             return HttpResponseRedirect(patient.get_absolute_url())
 
     else:

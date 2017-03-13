@@ -68,7 +68,7 @@ class Admission(Transfer):
 class Discharge(Transfer):
     admission = models.OneToOneField('Admission')
     mortality = models.BooleanField(default=False)
-    recommendations = models.TextField()
+    recommendations = models.TextField(blank=True)
 
 class Note(NoteMethods, models.Model):
     date=models.DateField(default=date.today)
