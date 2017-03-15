@@ -14,15 +14,26 @@
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
-        {% if user.username == 'ibrahim' %}
-        <li><a href="http://localhost:8888/notebooks/Sensei.ipynb?kernel_name=django_extensions">Sensei</a></li>
-        {% endif %}
-<!--        <li><a href="#" onclick="toggle_theme();return false;">Change Theme</a></li>-->
         {%if user.is_authenticated %}
-        <li><a href="">logged in as {{user}}</a></li>
-        <li><a href=" {% url 'logout' %}">logout</a></li>
+        <li class="dropdown">
+            <a class="dropdown" data-toggle="dropdown" role="button">
+                logged in as {{user | capfirst}}<span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                {% if user.username == 'ibrahim' %}
+                <li>
+                    <a href="http://localhost:8888/notebooks/Sensei.ipynb?kernel_name=django_extensions">
+                        Sensei
+                    </a>
+                </li>
+                {% endif %}
+                <li><a>Profile</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href=" {% url 'logout' %}">Log out</a></li>
+            </ul>
+        </li>
         {%else%}
-        <li><a href=" {% url 'login' %}">login</a></li>
+        <li><a href=" {% url 'login' %}">Log in</a></li>
         {%endif%}
       </ul>
      </div>
