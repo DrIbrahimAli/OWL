@@ -18,8 +18,11 @@ from django.contrib import admin
 from django.conf.urls.static import static
 from django.conf import settings
 
+from .views import *
+
 urlpatterns = [
     url('^accounts/', include('django.contrib.auth.urls')),
     url(r'^admin/', admin.site.urls),
+    url(r'^about/$', About.as_view(), name='about'),
     url(r'^emr/',include('emr.urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
