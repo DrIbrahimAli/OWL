@@ -1,0 +1,43 @@
+                                    Hospital No {{patient.serial_no}}
+
+
+
+Name: {{patient}}
+
+Date of Birth: {{patient.date_of_birth}}
+
+                                    ICU Discharge Summary
+
+Admission: {{admission.date}}
+
+Length of Stay: {{patient.los}} days
+
+Consultant:
+
+{%for consultant in admission.consultant.all %}
+{{consultant}}
+{% endfor %}
+
+                        --------------------------------------------------
+History:
+
+{{patient.get_history}}
+
+Cause of Admission:
+
+{{admission.cause_of_admission}}
+
+ICU Course:
+-----------
+{{patient.get_highlights}}
+
+Status on Discharge:
+--------------------
+{{discharge.status_on_transfer}}
+
+Recommendations:
+----------------
+{{discharge.recommendations}}
+                                                                     Date   /   /
+
+                                                                          Signature

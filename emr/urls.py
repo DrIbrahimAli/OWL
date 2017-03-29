@@ -19,6 +19,7 @@ urlpatterns = [
 
     url(r'^patient/(?P<patient_id>[0-9]+)/discharge$', views.PatientDischarge.as_view(), name='patient_discharge'),
     url(r'^discharge/(?P<pk>[0-9]+)$', views.DischargeEdit.as_view(), name='discharge_edit'),
+    url(r'^discharge_summary/(?P<pk>[0-9]+)$', views.dischargeSummary, name='discharge_summary'),
 
     url(r'^patient/(?P<patient_id>[0-9]+)/history$', views.HistoryAdd.as_view(), name='history_add'),
     url(r'^history/(?P<pk>[0-9]+)$', views.HistoryEdit.as_view(), name='history_edit'),

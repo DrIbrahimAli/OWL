@@ -36,6 +36,13 @@
             <a href="{%url 'emr:patient_admit' patient.id %}">
                 <span class="glyphicon glyphicon-download-alt"></span>
             </a>
+            <br/>
+            <a href="{%url 'emr:discharge_summary' patient.last_discharge.pk %}">
+                <button class="btn btn btn-sm" type="button">
+                    Discharge Summary
+                </button>
+            </a>
+
             {%endif%}
             {%endif%}
             {%endif%}

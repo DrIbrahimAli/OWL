@@ -4,7 +4,8 @@ from functools import reduce
 from django.shortcuts import render
 from django.urls import reverse
 from django.views import generic
-from django.http.response import HttpResponseRedirect
+from django.http.response import HttpResponseRedirect, HttpResponse
+from django.template import loader, Context
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db.models import Q
@@ -147,6 +148,25 @@ class PatientDischarge(PatientThingCreateMixin, generic.CreateView):
 class DischargeEdit(PatientThingViewMixin, generic.UpdateView):
     model = Discharge
     form_class= DischargeForm
+
+@login_required
+def dischargeSummary(request, pk):
+    discharge = Discharge.objects.get(pk=pk)
+    patient = discharge.patient
+    admission = discharge.admission
+    context = {
+        'discharge':discharge,
+        'patient':patient,
+        'admission':admission
+    }
+    # context['string'] = 'just a test string'
+    response = HttpResponse(content_type="text/plain; charset=utf-8")
+    response['Content-Disposition'] = 'attachment; filename="discharge"'
+    t = loader.get_template('emr/discharge')
+    c = Context(context)
+    response.write(t.render(c))
+    return response
+
 
 
 class NoteAdd(PatientThingCreateMixin, generic.CreateView):
