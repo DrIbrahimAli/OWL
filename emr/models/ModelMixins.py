@@ -111,7 +111,7 @@ class PatientMethods(object):
                 quotes += [[str(note.date), '\n'.join(interest).replace('#','')]]
         quotes.sort()
         for quote in quotes:
-            highlights +='{}'.format('\n'.join(quote))
+            highlights +='\n\n\t{}'.format('\n'.join(quote))
         return format_html(highlights)
 
     def get_labs(self):
