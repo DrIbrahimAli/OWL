@@ -119,21 +119,11 @@ class PatientMethods(object):
             d = OrderedDict()
             for LAB in self.patient_lab_quant_set.all():
                 if LAB.lab.name not in d.keys():
-                    d[LAB.lab.name]=[]
-                    d[LAB.lab.name+'_date']=[]
-                d[LAB.lab.name].append(LAB.result_with_alert())
-                d[LAB.lab.name+'_date'].append(LAB.time.strftime('%Y/%m/%d</br>%H.%M'))
-            df=pd.DataFrame()
-            for k in d.keys():
-              if not k.endswith('_date'):
-                  h={k:d[k],'date':d[k+'_date']}
-                  if df.empty:
-                      df=pd.DataFrame(h)
-                  else:
-                      rf=pd.DataFrame(h)
-                      df=pd.merge(df,rf,how='outer',on='date')
-            df.set_index('date',inplace=True)
-            df.sort_index(inplace=True,ascending=False)
+                    d[LAB.lab.name] = {LAB.time.strftime('%Y/%m/%d</br>%H.%M') : LAB.result_with_alert()}
+                else:
+                    d[LAB.lab.name].update({LAB.time.strftime('%Y/%m/%d</br>%H.%M'):LAB.result_with_alert()})
+            df=pd.DataFrame(d)
+            df.sort_index(inplace=True, ascending=False)
             pd.set_option('display.max_colwidth',-1)
             return format_html(df.to_html(
                         classes='table table-responsive table-striped table-bordered table-condensed',
@@ -142,7 +132,7 @@ class PatientMethods(object):
                         escape=False))
         except:
             pass
-    #def generate_report
+
     def get_risk(self):
         history = self.history
         risk='A '
@@ -228,10 +218,12 @@ class LabQuantMethods(LabMethods):
         value = str(result)
         max_threshold = max(self.lab.limit_max, self.lab.accepted_max)
         min_threshold = min(self.lab.limit_min, self.lab.accepted_min)
-        if (result > max_threshold) or (result < min_threshold):
-            value = colorify(value,pattern='(?P<colored>.*)',ALERT='danger',url='/emr/patient/lab_quant/{}'.format(self.pk))
-        if (result <= self.lab.accepted_max) and (result >= self.lab.accepted_min):
-            value = colorify(value,pattern='(?P<colored>.*)',ALERT='success',url='/emr/patient/lab_quant/{}'.format(self.pk))
+        if (result <= self.lab.limit_max) and (result >= self.lab.limit_min):
+            value = colorify(value,pattern='(?P<colored>.*)',ALERT='primary',url='/emr/lab_quant/{}'.format(self.pk))
+        elif (result > max_threshold) or (result < min_threshold):
+            value = colorify(value,pattern='(?P<colored>.*)',ALERT='warning',url='/emr/lab_quant/{}'.format(self.pk))
+        else:
+            value = colorify(value,pattern='(?P<colored>.*)',ALERT='success',url='/emr/lab_quant/{}'.format(self.pk))
         return format_html(value)
 
 
