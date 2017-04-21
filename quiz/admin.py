@@ -3,10 +3,8 @@ from django.contrib import admin
 from django.contrib.admin.widgets import FilteredSelectMultiple
 from django.utils.translation import ugettext_lazy as _
 
-from .models import Quiz, Category, SubCategory, Progress, Question
-from multichoice.models import MCQuestion, Answer
-from true_false.models import TF_Question
-from essay.models import Essay_Question
+from .models import Quiz, Category, SubCategory, Progress, Question ,\
+                    MCQuestion, Answer, TF_Question, Essay_Question
 
 
 class AnswerInline(admin.TabularInline):
@@ -69,7 +67,7 @@ class MCQuestionAdmin(admin.ModelAdmin):
     list_display = ('content', 'category', )
     list_filter = ('category',)
     fields = ('content', 'category', 'sub_category',
-              'figure', 'quiz', 'explanation', 'answer_order')
+              'figure', 'quiz', 'explanation')
 
     search_fields = ('content', 'explanation')
     filter_horizontal = ('quiz',)
