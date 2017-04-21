@@ -14,6 +14,7 @@ from .models.patient import *
 from .models.labs import *
 from .models.procedure import *
 from .models.radiology import *
+from .models.utils import is_int
 from .forms import *
 
 
@@ -51,19 +52,27 @@ class PatientSearch(LoginRequiredMixin, generic.ListView):
 #    paginate_by = 10
 
     def get_queryset(self):
+
+
         result = super().get_queryset()
 
         query = self.request.GET.get('q')
-        if query:
-            query_list = query.split()
+        query_list = [i for i in query.split() if not is_int(i)]
+        num_list = [i for i in query.split() if is_int(i)]
+        if query_list:
             result = result.filter(
-                reduce(operator.and_,
+                reduce(operator.or_,
                        (Q(first_name__icontains=q) for q in query_list)) |
-                reduce(operator.and_,
+                reduce(operator.or_,
                        (Q(middle_name__icontains=q) for q in query_list)) |
-                reduce(operator.and_,
+                reduce(operator.or_,
                        (Q(last_name__icontains=q) for q in query_list))
             )
+        if num_list:
+            result = result.filter(
+                reduce(operator.or_,
+                       (Q(serial_no=q) for q in num_list))
+           )
         return result
 
 

@@ -1,0 +1,10 @@
+<div class="well">
+    <form class="form-horizontal" action="{% url 'emr:patient_search' %}" method="get" accept-charset="utf-8">{% csrf_token  %}
+        <div class="form-group">
+          <input class="form-control" name="q" type="text" placeholder="Search patients by name or serial No.">
+          <button class="btn btn-primary pull-right" type="submit">
+            <span class="glyphicon glyphicon-search"></span> search
+          </button>
+        </div>
+    </form>
+</div>

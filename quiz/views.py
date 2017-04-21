@@ -7,8 +7,8 @@ from django.utils.decorators import method_decorator
 from django.views.generic import DetailView, ListView, TemplateView, FormView
 
 from .forms import QuestionForm, EssayForm
-from .models import Quiz, Category, Progress, Sitting, Question
-from essay.models import Essay_Question
+from .models import Quiz, Category, Progress, Sitting, Question, Essay_Question
+
 
 
 class QuizMarkerMixin(object):
