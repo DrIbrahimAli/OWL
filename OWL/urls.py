@@ -21,6 +21,7 @@ from django.conf import settings
 from .views import *
 
 urlpatterns = [
+    url(r'^$', About.as_view(), name='home'),
     url('^accounts/', include('django.contrib.auth.urls')),
     url(r'^admin/', admin.site.urls),
     url(r'^about/$', About.as_view(), name='about'),
