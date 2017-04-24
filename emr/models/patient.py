@@ -70,6 +70,12 @@ class Discharge(Transfer):
     mortality = models.BooleanField(default=False)
     recommendations = models.TextField(blank=True)
 
+    def save(self, *args, **kwargs):
+        if not self.patient == self.admission.patient:
+            raise Exception('admission is of another patient')
+        super().save(*args, **kwargs)
+
+
 class Note(NoteMethods, models.Model):
     date=models.DateField(default=date.today)
     patient = models.ForeignKey('Patient', on_delete=models.CASCADE)

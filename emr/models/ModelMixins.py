@@ -50,7 +50,10 @@ class PatientMethods(object):
             return ' date of birth not known'
 
     def last_discharge(self):
-        return self.last_admission().discharge
+        try:
+            return self.discharge_set.latest('date')
+        except:
+            return None
 
     def los(self):
         try:
@@ -92,13 +95,14 @@ class PatientMethods(object):
             self.admission_set.create(*args, **kwargs)
             self.save()
 
-    def discharge(self, *args, **kwargs):
-        if self.is_currently_admitted():
-            self.discharge_set.create(args, kwargs, admission=self.last_admission())
+    def discharge(self,*args, **kwargs):
+        kwargs['admission'] = kwargs.get('admission',self.last_admission())
+        try:
+            self.discharge_set.create(*args, **kwargs)
             print('discharging '+str(self))
             self.save()
-        else:
-            print('patient is not admitted')
+        except Exception as e:
+            print(e)
 
     def get_highlights(self):
         quotes=[]
