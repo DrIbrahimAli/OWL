@@ -3,6 +3,7 @@ from datetime import date
 from django.utils import timezone
 from pycountry import countries
 from .ModelMixins import LabMethods, TransferMethods
+from .utils import normalising_map, normalizeArabic
 
 class Person(models.Model):
     Country= list(countries)
@@ -27,6 +28,13 @@ class Person(models.Model):
 
     def __str__(self):
         return  '{} {} {}'.format(self.first_name, self.middle_name, self.last_name)
+
+    def save(self):
+        self.first_name = normalizeArabic(self.first_name)
+        self.middle_name = normalizeArabic(self.middle_name)
+        self.last_name = normalizeArabic(self.last_name)
+        super().save()
+
 
     class Meta:
         abstract = True

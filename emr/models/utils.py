@@ -12,3 +12,12 @@ def is_int(x):
         return True
     except:
         return False
+
+
+normalising_map = str.maketrans(
+                 'أإآؤئىة',
+                 'اااءءيه')
+
+def normalizeArabic(text):
+     text = text.translate(normalising_map)
+     return(text)

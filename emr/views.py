@@ -14,7 +14,7 @@ from .models.patient import *
 from .models.labs import *
 from .models.procedure import *
 from .models.radiology import *
-from .models.utils import is_int
+from .models.utils import is_int, normalising_map, normalizeArabic
 from .forms import *
 
 
@@ -57,7 +57,7 @@ class PatientSearch(LoginRequiredMixin, generic.ListView):
         result = super().get_queryset()
 
         query = self.request.GET.get('q')
-        query_list = [i for i in query.split() if not is_int(i)]
+        query_list = [normalizeArabic(i) for i in query.split() if not is_int(i)]
         num_list = [i for i in query.split() if is_int(i)]
         if query_list:
             result = result.filter(
