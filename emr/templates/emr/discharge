@@ -1,7 +1,6 @@
                                     Hospital No {{patient.serial_no}}
 
 
-
 Name: {{patient}}
 
 Date of Birth: {{patient.date_of_birth}}
@@ -13,19 +12,24 @@ Admission: {{admission.date}}
 Length of Stay: {{patient.los}} days
 
 Consultant:
-
 {%for consultant in admission.consultant.all %}
 {{consultant}}
 {% endfor %}
 
                         --------------------------------------------------
 History:
-
+--------
 {{patient.get_history}}
 
 Cause of Admission:
-
+-------------------
 {{admission.cause_of_admission}}
+
+Procedures:
+-----------
+{%for p in patient.procedure_set.all %}
+{{p}}
+{% endfor %}
 
 ICU Course:
 -----------
@@ -38,6 +42,4 @@ Status on Discharge:
 Recommendations:
 ----------------
 {{discharge.recommendations}}
-                                                                     Date   /   /
-
-                                                                          Signature
+                                                                     {{discharge.date}}

@@ -31,7 +31,7 @@ class PatientMethods(object):
 
 
     def last_admission(self):
-        return self.admission_set.latest('date')
+        return self.admission_set.latest('pk')
 
     def age_on_admission(self, *args):
         try :
@@ -51,7 +51,7 @@ class PatientMethods(object):
 
     def last_discharge(self):
         try:
-            return self.discharge_set.latest('date')
+            return self.discharge_set.latest('pk')
         except:
             return None
 
@@ -72,9 +72,9 @@ class PatientMethods(object):
         else:
             return False
 
-    def has_been_discharge(self):
-        if not (self.never_admitted() and self.is_currently_admitted()):
-            return True
+    def has_been_discharged(self):
+        if not self.never_admitted():
+            return not self.is_currently_admitted()
         else:
             return False
 
@@ -92,17 +92,20 @@ class PatientMethods(object):
             print('patient is already admitted')
         else:
             print('admitting '+ str(self))
+            print(kwargs)
             self.admission_set.create(*args, **kwargs)
-            self.save()
 
     def discharge(self,*args, **kwargs):
-        kwargs['admission'] = kwargs.get('admission',self.last_admission())
-        try:
-            self.discharge_set.create(*args, **kwargs)
-            print('discharging '+str(self))
-            self.save()
-        except Exception as e:
-            print(e)
+        if self.is_currently_admitted():
+            kwargs['admission'] = kwargs.get('admission',self.last_admission())
+            print(kwargs)
+            try:
+                self.discharge_set.create(*args, **kwargs)
+                print('discharging {}'.format(self))
+            except Exception as e:
+                print(e)
+        else:
+            print('{} is not admitted'.format(self))
 
     def get_highlights(self):
         quotes=[]

@@ -24,6 +24,10 @@ class Physician(Person):
     speciality=models.CharField(max_length=6, choices=SPECIALITIES)
     rank=models.CharField(max_length=3, choices=RANKS)
     graduation_year=models.DateField(null=True,blank=True)
+
+    def __str__(self):
+        return  '{} {} {}  {}'.format(self.get_speciality_display(), self.first_name, self.middle_name, self.last_name, )
+
     def is_consultant(self):
         return self.rank =='CN'
 
