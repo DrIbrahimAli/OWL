@@ -92,13 +92,11 @@ class PatientMethods(object):
             print('patient is already admitted')
         else:
             print('admitting '+ str(self))
-            print(kwargs)
             self.admission_set.create(*args, **kwargs)
 
     def discharge(self,*args, **kwargs):
         if self.is_currently_admitted():
             kwargs['admission'] = kwargs.get('admission',self.last_admission())
-            print(kwargs)
             try:
                 self.discharge_set.create(*args, **kwargs)
                 print('discharging {}'.format(self))
