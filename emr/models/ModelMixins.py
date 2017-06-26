@@ -159,7 +159,7 @@ class PatientMethods(object):
             risk += 'dyslipidemic; '
         if history.is_smoker:
             risk += 'smoker '
-        risk += self.age + self.get_sex_display() + ' patient.'
+        risk += str(self.age) +' year-old '+ self.get_sex_display() + ' patient.'
         return risk
 
     def get_present_history(self):

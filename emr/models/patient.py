@@ -8,7 +8,7 @@ from .ModelMixins import PatientMethods, NoteMethods, PatientUrlMixin
 class PatientManager(models.Manager):
 
     def current(self):
-        IDs = [p.pk for p in self.all() if p.is_currently_admitted()]
+        IDs = [p.pk for p in self.all() if p.is_currently_admitted]
         return self.filter(pk__in=IDs)
 
     def month_admissions(self):
