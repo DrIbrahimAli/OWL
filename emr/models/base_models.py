@@ -9,7 +9,7 @@ class Person(models.Model):
     Country= list(countries)
     NATIONALITIES=[]
     for i in range(len(Country)):
-        NATIONALITIES.append((Country[i].alpha3,Country[i].name))
+        NATIONALITIES.append((Country[i].alpha_3,Country[i].name))
     SEX_CHOICES = [
         ('M', 'male'),
         ('F', 'female')]

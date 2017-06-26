@@ -43,8 +43,8 @@ class PatientMethods(object):
             admission_pk=self.last_admission.pk
         return self.admission_set.get(pk=admission_pk).date.year - self.date_of_birth.year
 
-   @property
-   def age(self):
+    @property
+    def age(self):
         if self.date_of_birth:
             if self.never_admitted:
                 return date.today().year - self.date_of_birth.year
@@ -53,8 +53,8 @@ class PatientMethods(object):
         else:
             return ' date of birth not known'
 
-   @property
-   def last_discharge(self):
+    @property
+    def last_discharge(self):
         try:
             return self.discharge_set.latest('pk')
         except:
