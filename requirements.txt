@@ -1,3 +1,12 @@
+pycountry
+django-crispy-forms
+django-extensions
+psycopg2
+
+
+
+
+
 django-model-utils==2.0.3
 Django==1.6.5
 Pillow==2.5.0
