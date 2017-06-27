@@ -148,8 +148,8 @@ class PatientDischarge(PatientThingCreateMixin, generic.CreateView):
     def form_valid(self, form):
         self.object = form.save(commit=False)
         self.object.patient = Patient.objects.get(pk=self.kwargs['patient_id'])
-        self.object.admission= self.object.patient.last_admission()
-        self.object.transfer_from= self.object.patient.last_admission().transfer_to
+        self.object.admission= self.object.patient.last_admission
+        self.object.transfer_from= self.object.patient.last_admission.transfer_to
         self.object.save()
         return super().form_valid(form)
 
@@ -185,7 +185,7 @@ class NoteAdd(PatientThingCreateMixin, generic.CreateView):
     def form_valid(self, form):
         self.object = form.save(commit=False)
         self.object.patient = Patient.objects.get(pk=self.kwargs['patient_id'])
-        self.object.admission = self.object.patient.last_admission()
+        self.object.admission = self.object.patient.last_admission
         self.object.physician = self.request.user.physician
         self.object.save()
         return super().form_valid(form)
