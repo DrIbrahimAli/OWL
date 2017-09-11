@@ -80,12 +80,13 @@ WSGI_APPLICATION = 'OWL.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
+#change as appropriate
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'owl_db',
-	'USER':'intensivist',
-	'PASSWORD':'wioels92',
+        'NAME': 'database',
+	'USER':'user',
+	'PASSWORD':'password',
 	'HOST':'127.0.0.1',
 	'PORT':'5432',
     }
@@ -124,10 +125,10 @@ USE_L10N = True
 
 USE_TZ = True
 
-
+#change as appropriate
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'dr.ibrahim.nofel@gmail.com'
-EMAIL_HOST_PASSWORD = 'wioels92'
+EMAIL_HOST_USER = 'email@gmail.com'
+EMAIL_HOST_PASSWORD = 'password'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
