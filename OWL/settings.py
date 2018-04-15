@@ -78,12 +78,12 @@ WSGI_APPLICATION = 'OWL.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
-# edit for your own specific settings
 
+# edit for your own specific settings
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'owl_db',
+        'NAME': 'database',
 	'USER':'username',
 	'PASSWORD':'password',
 	'HOST':'127.0.0.1',
@@ -124,9 +124,9 @@ USE_L10N = True
 
 USE_TZ = True
 
-
+# edit for your own specific settings
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'gmail_account'
+EMAIL_HOST_USER = 'email@gmail.com'
 EMAIL_HOST_PASSWORD = 'password'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
