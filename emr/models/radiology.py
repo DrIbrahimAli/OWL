@@ -49,4 +49,7 @@ class Echocardiography(EchoMethods, Radiology):
     TAPSE = models.DecimalField(max_digits=5, decimal_places=2, null=True,blank=True)
 
 class Interventional_Radiology(ProcedureMethods, Radiology):
-    pass
+    anaesthelogist = models.ForeignKey('Physician',
+        on_delete=models.PROTECT,
+        related_name='sedating_for',
+        null=True, blank=True)

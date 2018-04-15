@@ -66,7 +66,7 @@ class Admission(Transfer):
 
 
 class Discharge(Transfer):
-    admission = models.OneToOneField('Admission')
+    admission = models.OneToOneField('Admission',on_delete=models.CASCADE)
     mortality = models.BooleanField(default=False)
     recommendations = models.TextField(blank=True)
 

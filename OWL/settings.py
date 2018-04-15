@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'django_extensions',
 
     'emr',
-    'quiz',
 ]
 
 MIDDLEWARE = [
@@ -79,15 +78,16 @@ WSGI_APPLICATION = 'OWL.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
+# edit for your own specific settings
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'owl_db',
-	'USER':'intensivist',
-	'PASSWORD':'wioels92',
+	'USER':'username',
+	'PASSWORD':'password',
 	'HOST':'127.0.0.1',
-	'PORT':'5432',
+	'PORT':'port',
     }
 }
 
@@ -126,8 +126,8 @@ USE_TZ = True
 
 
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'dr.ibrahim.nofel@gmail.com'
-EMAIL_HOST_PASSWORD = 'wioels92'
+EMAIL_HOST_USER = 'gmail_account'
+EMAIL_HOST_PASSWORD = 'password'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 

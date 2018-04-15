@@ -26,5 +26,4 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^about/$', About.as_view(), name='about'),
     url(r'^emr/',include('emr.urls')),
-    url(r'^quiz/',include('quiz.urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

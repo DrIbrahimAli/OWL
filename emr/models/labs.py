@@ -19,11 +19,11 @@ class Patient_Lab_qual(Patient_Lab):
         ('P','+ve'),
         ('N','-ve')]
 
-    lab= models.ForeignKey('Lab_qual')
+    lab= models.ForeignKey('Lab_qual',on_delete=models.CASCADE)
     result=models.CharField(max_length=1, choices=RESULTS)
 
 class Patient_Lab_quant(LabQuantMethods, Patient_Lab):
-    lab = models.ForeignKey('Lab_quant')
+    lab = models.ForeignKey('Lab_quant',on_delete=models.CASCADE)
     result = models.DecimalField(max_digits=7, decimal_places=2)
     def __str__(self):
         return '{} {} ===> {}'.format(str(self.time), self.lab.name, str(self.result))
