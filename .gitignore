@@ -1,3 +1,5 @@
+mydatabase
+/dev_env
 /media
 **/*.pyc
 **/*.ipynb*

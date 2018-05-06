@@ -15,9 +15,9 @@ class Person(models.Model):
         ('F', 'female')]
 
     first_name = models.CharField(max_length=30)
-    middle_name = models.CharField(max_length=90,blank=True)
+    middle_name = models.CharField(max_length=90, null=True, blank=True)
     last_name = models.CharField(max_length=30)
-    sex = models.CharField(max_length=1, choices=SEX_CHOICES)
+    sex = models.CharField(max_length=1, choices=SEX_CHOICES,default='M')
     id_card = models.PositiveIntegerField(null=True,blank=True)
     date_of_birth = models.DateField(null=True,blank=True)
     nationality = models.CharField(max_length=3, choices=NATIONALITIES, default='EGY')
@@ -29,11 +29,15 @@ class Person(models.Model):
     def __str__(self):
         return  '{} {} {}'.format(self.first_name, self.middle_name, self.last_name)
 
-    def save(self):
-        self.first_name = normalizeArabic(self.first_name)
-        self.middle_name = normalizeArabic(self.middle_name)
-        self.last_name = normalizeArabic(self.last_name)
-        super().save()
+    def save(self,*args,**kwargs):
+        try:
+            self.first_name = normalizeArabic(self.first_name)
+            self.last_name = normalizeArabic(self.last_name)
+            self.middle_name = normalizeArabic(self.middle_name)
+        except:
+            pass
+        finally:
+            super().save()
 
 
     class Meta:

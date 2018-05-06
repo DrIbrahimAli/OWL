@@ -1,4 +1,4 @@
-from django.conf.urls import path, include
+from django.urls import path, include
 from . import views
 
 app_name='emr'
@@ -34,7 +34,7 @@ urlpatterns = [
     path('echocardiography/<int:pk>', views.EchocardiographyEdit.as_view(), name='echocardiography_edit'),
 
     path('patient/<int:patient_id>/interven_rad', views.Interventional_RadiologyAdd.as_view(), name='interven_rad_add'),
-    path('interven_rad/<int:pk>', views.Interpath(,name='interven_rad_edit'),
+    path('interven_rad/<int:pk>', views.Interventional_RadiologyEdit,name='interven_rad_edit'),
 
     path('patient/<int:patient_id>/routine_lab', views.routine_lab, name='routine_lab'),
 

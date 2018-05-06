@@ -26,7 +26,10 @@ class Physician(Person):
     graduation_year=models.DateField(null=True,blank=True)
 
     def __str__(self):
-        return  '{} {} {}  {}'.format(self.get_speciality_display(), self.first_name, self.middle_name, self.last_name, )
+        return  '{} {} {}  {}'.format(self.get_speciality_display(),
+                                      self.first_name,
+                                      self.middle_name,
+                                      self.last_name, )
 
     def is_consultant(self):
         return self.rank =='CN'
@@ -34,7 +37,13 @@ class Physician(Person):
     @receiver(post_save, sender=User)
     def create_physician(sender, instance, created, **kwargs):
         if created:
-            Physician.objects.create(user=instance, first_name=instance.first_name, last_name=instance.last_name, email=instance.email)
+            Physician.objects.create(
+                user=instance,
+                first_name=instance.first_name,
+                middle_name=' ',
+                last_name=instance.last_name,
+                email=instance.email
+                )
 
     @receiver(post_save, sender=User)
     def save_physician(sender, instance, **kwargs):
@@ -44,4 +53,8 @@ class Physician(Person):
             instance.physician.email = instance.email
             instance.physician.save()
         except:
-            Physician.objects.create(user=instance, first_name=instance.first_name, last_name=instance.last_name, email=instance.email)
+            Physician.objects.create(user=instance,
+                first_name=instance.first_name,
+                last_name=instance.last_name,
+                email=instance.email
+                )
