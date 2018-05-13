@@ -11,6 +11,6 @@ from .basic import *
 # 	'USER':'username',
 # 	'PASSWORD':'password',
 # 	'HOST':'127.0.0.1',
-# 	'PORT':'port',
+# 	'PORT':'5432', # this is the default port for postgresql server
 #     }
 # }

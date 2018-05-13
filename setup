@@ -1,0 +1,25 @@
+#!/bin/bash
+
+echo '## Installing essential packages ##'
+echo
+echo
+
+sudo apt update && sudo apt install postgresql nginx python3 python3-pip && \
+pip3 install -r requirements.txt && \
+
+echo ## Setting up Database ##
+
+echo 'please enter Database username:  '
+read dbusername
+echo 'please enter Database name:  '
+read dbname
+sudo -u postgres createuser --interactive -d -P $dbusername && \
+sudo -u postgres createdb -O $dbusername $dbname && \
+
+echo 'please edit user_settings.py file to fit you Database credintials'
+sleep 5
+edit OWL/settings/user_settings.py
+
+python3 manage.py makemigrations
+python3 manage.py migrate
+python3 manage.py migrate --run-syncdb
