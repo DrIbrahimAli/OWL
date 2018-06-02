@@ -14,3 +14,10 @@ from .basic import *
 # 	'PORT':'5432', # this is the default port for postgresql server
 #     }
 # }
+
+## EMAIL SETTINGS
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_HOST_USER = 'email@gmail.com'
+# EMAIL_HOST_PASSWORD = 'password'
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True

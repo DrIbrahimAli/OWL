@@ -170,7 +170,7 @@ class RoutineLabForm(forms.Form):
     time = forms.DateTimeField()
 
     urea = forms.DecimalField(max_digits=7, decimal_places=2,required=False)
-    #BUN = forms.DecimalField(max_digits=7, decimal_places=2,required=False)
+    # BUN = forms.DecimalField(max_digits=7, decimal_places=2,required=False)
     creat = forms.DecimalField(max_digits=7, decimal_places=2,required=False)
     AST = forms.DecimalField(max_digits=7, decimal_places=2,required=False)
     ALT = forms.DecimalField(max_digits=7, decimal_places=2,required=False)
@@ -183,10 +183,10 @@ class RoutineLabForm(forms.Form):
     Trop_I = forms.DecimalField(max_digits=7, decimal_places=2,required=False)
     CK = forms.DecimalField(max_digits=7, decimal_places=2,required=False)
     CKmb = forms.DecimalField(max_digits=7, decimal_places=2,required=False)
-#    LDH = forms.DecimalField(max_digits=7, decimal_places=2,required=False)
- #   amylase = forms.DecimalField(max_digits=7, decimal_places=2,required=False)
-  #  lipase = forms.DecimalField(max_digits=7, decimal_places=2,required=False)
-   # CRP = forms.DecimalField(max_digits=7, decimal_places=2,required=False)
+    # LDH = forms.DecimalField(max_digits=7, decimal_places=2,required=False)
+    # amylase = forms.DecimalField(max_digits=7, decimal_places=2,required=False)
+    # lipase = forms.DecimalField(max_digits=7, decimal_places=2,required=False)
+    # CRP = forms.DecimalField(max_digits=7, decimal_places=2,required=False)
 
     Hb = forms.DecimalField(max_digits=7, decimal_places=2,required=False)
     TLC  = forms.DecimalField(max_digits=7, decimal_places=2,required=False)

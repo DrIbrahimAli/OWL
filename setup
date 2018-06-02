@@ -16,9 +16,12 @@ read dbname
 sudo -u postgres createuser --interactive -d -P $dbusername && \
 sudo -u postgres createdb -O $dbusername $dbname && \
 
-echo 'please edit user_settings.py file to fit you Database credintials'
-sleep 5
-edit OWL/settings/user_settings.py
+if [ -e ];then
+	echo 'please edit user_settings.py file to fit you Database credintials'
+	sleep 5
+	cp OWL/settings/template_settings.py OWL/settings/user_settings.py
+	edit OWL/settings/user_settings.py
+fi
 
 python3 manage.py makemigrations
 python3 manage.py migrate
