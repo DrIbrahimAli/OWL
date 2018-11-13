@@ -1,6 +1,6 @@
 from django import forms
 from django.core.exceptions import ValidationError
-
+from django.contrib.admin.widgets import AdminDateWidget, AdminTimeWidget, AdminSplitDateTime
 from .models.patient import *
 from .models.physician import *
 from .models.labs import *
@@ -14,7 +14,7 @@ class PhysicianForm(forms.ModelForm):
         model = Physician
         exclude = ('user',)
         widgets = {
-        'date_of_birth': forms.widgets.SelectDateWidget(years=range(1900,2100))
+        'date_of_birth': AdminDateWidget
         }
 
 
@@ -24,12 +24,13 @@ class PatientForm(forms.ModelForm):
         model = Patient
         fields= '__all__'
         widgets = {
-        'date_of_birth': forms.widgets.SelectDateWidget(years=range(1900,2100))
+        'date_of_birth': AdminDateWidget
         }
 
 class PatientThingFormMixin(forms.ModelForm):
     class Meta:
         exclude = ('patient',)
+
 
 class HistoryForm(PatientThingFormMixin):
     class Meta:
@@ -41,7 +42,7 @@ class AdmissionForm(PatientThingFormMixin):
         model = Admission
         exclude = ('patient',)
         widgets = {
-        'date': forms.widgets.SelectDateWidget(years=range(1900,2100))
+        'date': AdminDateWidget
         }
 
 class DischargeForm(PatientThingFormMixin):
@@ -49,7 +50,7 @@ class DischargeForm(PatientThingFormMixin):
         model = Discharge
         exclude = ('patient','admission', 'transfer_from')
         widgets = {
-        'date': forms.widgets.SelectDateWidget(years=range(1900,2100))
+        'date': AdminDateWidget
         }
 
     def clean(self):
@@ -73,7 +74,7 @@ class NoteForm(PatientThingFormMixin):
         model = Note
         exclude = ('patient','admission', 'physician')
         widgets = {
-        'date': forms.widgets.SelectDateWidget(years=range(1900,2100))
+        'date': AdminDateWidget
         }
 
 
@@ -82,7 +83,7 @@ class RadiologyForm(PatientThingFormMixin):
         model = Radiology
         exclude = ('patient',)
         widgets = {
-        'date': forms.widgets.SelectDateWidget(years=range(1900,2100))
+        'date': AdminDateWidget
         }
 
 
@@ -91,7 +92,7 @@ class EchocardiographyForm(PatientThingFormMixin):
         model = Echocardiography
         exclude = ('patient','modality', 'region', 'with_contrast')
         widgets = {
-        'date': forms.widgets.SelectDateWidget(years=range(1900,2100))
+        'date': AdminDateWidget
         }
 
 
@@ -112,7 +113,7 @@ class Interventional_RadiologyForm(PatientThingFormMixin):
             'impression',
         ]
         widgets = {
-        'date': forms.widgets.SelectDateWidget(years=range(1900,2100))
+        'date': AdminDateWidget
         }
 
 
@@ -121,7 +122,7 @@ class ProcedureForm(PatientThingFormMixin):
         model = Procedure
         exclude = ('patient',)
         widgets = {
-        'date': forms.widgets.SelectDateWidget(years=range(1900,2100))
+        'date': AdminDateWidget
         }
 
 
@@ -130,7 +131,7 @@ class SurgeryForm(PatientThingFormMixin):
         model = Surgery
         exclude = ('patient',)
         widgets = {
-        'date': forms.widgets.SelectDateWidget(years=range(1900,2100))
+        'date': AdminDateWidget
         }
 
 
@@ -152,7 +153,7 @@ class CultureForm(PatientThingFormMixin):
         model = Culture
         exclude = ('patient',)
         widgets = {
-        'date': forms.widgets.SelectDateWidget(years=range(1900,2100))
+        'date': AdminDateWidget
         }
 
 
@@ -161,13 +162,13 @@ class Fluid_analysisForm(PatientThingFormMixin):
         model = Fluid_analysis
         exclude = ('patient',)
         widgets = {
-        'date': forms.widgets.SelectDateWidget(years=range(1900,2100))
+        'date': AdminDateWidget
         }
 
 
 class RoutineLabForm(forms.Form):
 
-    time = forms.DateTimeField()
+    time = forms.DateTimeField(widget=AdminSplitDateTime)
 
     urea = forms.DecimalField(max_digits=7, decimal_places=2,required=False)
     # BUN = forms.DecimalField(max_digits=7, decimal_places=2,required=False)
