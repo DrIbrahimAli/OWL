@@ -4,4 +4,5 @@ mydatabase
 **/*.pyc
 **/*.ipynb*
 **/migrations
+**/fixtures
 /OWL/settings/user_settings.py
