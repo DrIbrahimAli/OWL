@@ -28,7 +28,7 @@ SECRET_KEY = '*1d+s%dfkj#uz2-ch3*w3@z$6@hkx_s=&*a!^9l8&ez50aq@cl'
 DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1']
-
+STATIC_ROOT='/data/data/com.termux/files/home/storage/external-1/projects/static'
 
 # Application definition
 
@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django_extensions',
 
     'emr',
+    'ckeditor',
 ]
 
 MIDDLEWARE = [
@@ -141,3 +142,18 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
+
+
+CKEDITOR_CONFIGS = { 
+        'default': { 
+            'toolbar': 'Custom', 
+            'toolbar_Custom': [ 
+                ['TextColor', 
+                    'BulletedList', '-', 
+                    'Outdent', 'Indent', '-', 
+                    'JustifyLeft', 'JustifyCenter', 
+                    ], 
+                ['Link', 'Unlink'], 
+                ] 
+            }
+}
