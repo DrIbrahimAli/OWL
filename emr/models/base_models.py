@@ -1,6 +1,7 @@
 from django.db import models
 from datetime import date
 from django.utils import timezone
+from ckeditor.fields import RichTextField
 from pycountry import countries
 from .ModelMixins import LabMethods, TransferMethods
 from .utils import normalising_map, normalizeArabic
@@ -61,7 +62,7 @@ class Transfer(TransferMethods, models.Model):
     patient=models.ForeignKey('Patient', on_delete=models.CASCADE)
     transfer_to = models.CharField(max_length=4, choices=LOCATIONS)
     transfer_from = models.CharField(max_length=4, choices=LOCATIONS)
-    status_on_transfer = models.TextField()
+    status_on_transfer = RichTextField()
 
     def __str__(self):
         return '{0} transferred on {3} from {1} to {2}'.format(self.patient, self.transfer_from, self.transfer_to, self.date)

@@ -28,7 +28,6 @@ SECRET_KEY = '*1d+s%dfkj#uz2-ch3*w3@z$6@hkx_s=&*a!^9l8&ez50aq@cl'
 DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1']
-STATIC_ROOT='/data/data/com.termux/files/home/storage/external-1/projects/static'
 
 # Application definition
 
@@ -129,6 +128,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
+
+STATIC_ROOT='../static/'
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
@@ -143,17 +144,22 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
-
-CKEDITOR_CONFIGS = { 
-        'default': { 
-            'toolbar': 'Custom', 
-            'toolbar_Custom': [ 
-                ['TextColor', 
-                    'BulletedList', '-', 
-                    'Outdent', 'Indent', '-', 
-                    'JustifyLeft', 'JustifyCenter', 
-                    ], 
-                ['Link', 'Unlink'], 
-                ] 
+CKEDITOR_CONFIGS = {
+        'default': {
+            'width':'100%',
+            'toolbar': 'Custom',
+            'toolbar_Custom': [
+                ['TextColor',
+                    'BulletedList', '-',
+                    'Outdent', 'Indent', '-',
+                    'JustifyLeft', 'JustifyCenter',
+                    ],
+                ['Link', 'Unlink',
+                # 'Source',
+                ],
+                ],
+            'colorButton_colors' : 'e74c3c',
+            'colorButton_enableMore' : False,
+            'colorButton_foreStyle' : { 'element': 'strong', 'styles': { 'color': '#(color)' } },
             }
 }

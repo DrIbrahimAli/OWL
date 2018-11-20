@@ -1,4 +1,5 @@
 from django.db import models
+from ckeditor.fields import RichTextField
 from .patient import Patient
 from .physician import Physician
 from .ModelMixins import ProcedureMethods, RadiologyMethods, EchoMethods
@@ -30,7 +31,7 @@ class Radiology(RadiologyMethods, models.Model):
     with_contrast= models.BooleanField(default=False)
     center= models.CharField(max_length=30, null=True,blank=True)
     image = models.FileField(null=True, blank=True,)
-    impression=models.TextField(null=True,blank=True)
+    impression=RichTextField(null=True,blank=True)
     # document = models.FileField(upload_to='documents/{}/'.format.(patient.id))
     class Meta:
         ordering=['modality','-date',]

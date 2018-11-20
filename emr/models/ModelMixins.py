@@ -6,6 +6,7 @@ from collections import OrderedDict
 from django.db import models
 from django.utils.html import format_html
 from django.urls import reverse
+from ckeditor.fields import RichTextField
 
 from .utils import colorify
 
@@ -117,11 +118,11 @@ class PatientMethods(object):
         quotes=[]
         highlights=''
         for note in self.last_admission.note_set.all():
-            interest = re.compile('#.*?#').findall(note.status)
-            interest += re.compile('#.*?#').findall(note.plan)
-            interest += re.compile('#.*?#').findall(note.events)
+            interest = re.compile('\<strong style="color:#e74c3c"\>.*?\</strong\>').findall(note.status)
+            interest += re.compile('\<strong style="color:#e74c3c"\>.*?\</strong\>').findall(note.plan)
+            interest += re.compile('\<strong style="color:#e74c3c"\>.*?\</strong\>').findall(note.events)
             if interest:
-                quotes += [[str(note.date), '\n'.join(interest).replace('#','')]]
+                quotes += [[str(note.date), '\n'.join(interest).replace('<strong style="color:#e74c3c">','').replace('</strong>','')]]
         quotes.sort()
         for quote in quotes:
             highlights +='\n\n\t{}'.format('\n'.join(quote))
@@ -208,7 +209,7 @@ class ProcedureMethods(PatientUrlMixin, models.Model):
         on_delete=models.PROTECT,
         related_name='anaesthetizing_for',
         null=True, blank=True)
-    details = models.TextField()
+    details = RichTextField()
     complications = models.CharField(max_length=300, blank=True)
 
     def __str__(self):

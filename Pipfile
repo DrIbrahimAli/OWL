@@ -5,11 +5,12 @@ name = "pypi"
 
 [packages]
 pycountry = "*"
-django = "*"
 django-crispy-forms = "*"
 django-extensions = "*"
 "psycopg2" = "*"
 pandas = "*"
+django-ckeditor = "*"
+Django = "*"
 
 [dev-packages]
 

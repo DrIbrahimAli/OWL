@@ -1,7 +1,7 @@
 from django import forms
 from django.core.exceptions import ValidationError
 from django.contrib.admin.widgets import AdminDateWidget, AdminTimeWidget, AdminSplitDateTime
-from ckeditor.widgets import CKEditorWidget 
+from ckeditor.widgets import CKEditorWidget
 from .models.patient import *
 from .models.physician import *
 from .models.labs import *
@@ -76,7 +76,6 @@ class NoteForm(PatientThingFormMixin):
         exclude = ('patient','admission', 'physician')
         widgets = {
         'date': AdminDateWidget,
-        'events': CKEditorWidget 
         }
 
 

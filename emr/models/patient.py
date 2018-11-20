@@ -1,6 +1,7 @@
 from django.db import models
 from datetime import date
 from django.utils import timezone
+from ckeditor.fields import RichTextField
 from .base_models import Person, Transfer
 from .ModelMixins import PatientMethods, NoteMethods, PatientUrlMixin
 
@@ -49,9 +50,9 @@ class History(PatientUrlMixin, models.Model):
     is_dyslipidemic= models.BooleanField(default=False)
     is_diabetic_I= models.BooleanField(default=False)
     is_diabetic_II= models.BooleanField(default=False)
-    present_history = models.TextField(null=True, blank=True)
-    past_history = models.TextField(null=True, blank=True)
-    drug_and_allergy = models.TextField(null=True, blank=True)
+    present_history = RichTextField(null=True, blank=True)
+    past_history = RichTextField(null=True, blank=True)
+    drug_and_allergy = RichTextField(null=True, blank=True)
 
 
 class Admission(Transfer):
@@ -68,7 +69,7 @@ class Admission(Transfer):
 class Discharge(Transfer):
     admission = models.OneToOneField('Admission',on_delete=models.CASCADE)
     mortality = models.BooleanField(default=False)
-    recommendations = models.TextField(blank=True)
+    recommendations = RichTextField(blank=True)
 
     def save(self, *args, **kwargs):
         if not self.patient == self.admission.patient:
@@ -82,9 +83,9 @@ class Note(NoteMethods, models.Model):
     admission = models.ForeignKey('Admission', on_delete=models.CASCADE)
     physician = models.ForeignKey('Physician', on_delete=models.PROTECT)
     sofa_score = models.PositiveSmallIntegerField(null=True, blank=True)
-    status = models.TextField()
-    plan = models.TextField()
-    events = models.TextField()
+    status = RichTextField()
+    plan = RichTextField()
+    events = RichTextField()
 
     class Meta:
         ordering=['-date','-admission']

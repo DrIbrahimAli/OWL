@@ -1,4 +1,5 @@
 from django.db import models
+from ckeditor.fields import RichTextField
 from .base_models import Lab, Patient_Lab
 from .patient import Patient
 from .ModelMixins import LabQuantMethods
@@ -51,4 +52,4 @@ class Culture(Patient_Lab):
 
 class Fluid_analysis(Patient_Lab):
     specimen = models.CharField(max_length=50)
-    report = models.TextField()
+    report = RichTextField()

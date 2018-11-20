@@ -1,6 +1,6 @@
 import re
 
-def colorify(statement,pattern='#(?P<colored>.*?)#', ALERT='danger',url=None):
+def colorify(statement,pattern='\<strong style="color:#e74c3c"\>(?P<colored>.*?)\</strong\>', ALERT='danger',url=None):
     if url:
         return re.sub(pattern,'<a href="{}" target="_blank"><span class="text-{}" >\g<colored></span></a>'.format(url,ALERT),statement)
     else:
