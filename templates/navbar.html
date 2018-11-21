@@ -16,6 +16,7 @@
         <ul class="nav navbar-nav">
             <li><a href="{% url 'about' %}"> about </a></li>
             <li><a href="{% url 'emr:home' %}"> patient records </a></li>
+            <li><a href="{% url 'tasks:tasks_undone' %}"> Tasks </a></li>
         </ul>
       <ul class="nav navbar-nav navbar-right">
         {%if user.is_authenticated %}

@@ -1,3 +1,4 @@
+import re
 import operator
 from functools import reduce
 
@@ -10,6 +11,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db.models import Q
 
+from tasks.models import Task
 from .models.patient import *
 from .models.labs import *
 from .models.procedure import *
@@ -182,18 +184,55 @@ class NoteAdd(PatientThingCreateMixin, generic.CreateView):
     model = Note
     form_class= NoteForm
 
+    def get_tasks(self):
+        note = self.object
+        tasks = re.compile('\<li\>.*?\</li\>').findall(note.status)
+        tasks += re.compile('\<li\>.*?\</li\>').findall(note.plan)
+        tasks += re.compile('\<li\>.*?\</li\>').findall(note.events)
+        if tasks:
+            for task in tasks:
+                task=task.replace('<li>','').replace('</li>','')
+                Task.objects.get_or_create(
+                due_date=note.date,
+                patient=note.patient,
+                description=task
+                )
+
+
     def form_valid(self, form):
         self.object = form.save(commit=False)
         self.object.patient = Patient.objects.get(pk=self.kwargs['patient_id'])
         self.object.admission = self.object.patient.last_admission
         self.object.physician = self.request.user.physician
         self.object.save()
+        self.get_tasks()
         return super().form_valid(form)
 
 
 class NoteEdit(PatientThingViewMixin, generic.UpdateView):
     model = Note
     form_class= NoteForm
+
+    def get_tasks(self):
+        note = self.object
+        tasks = re.compile('\<li\>.*?\</li\>').findall(note.status)
+        tasks += re.compile('\<li\>.*?\</li\>').findall(note.plan)
+        tasks += re.compile('\<li\>.*?\</li\>').findall(note.events)
+        if tasks:
+            for task in tasks:
+                task=task.replace('<li>','').replace('</li>','')
+                Task.objects.get_or_create(
+                due_date=note.date,
+                patient=note.patient,
+                description=task
+                )
+
+
+    def form_valid(self, form):
+        self.object = form.save(commit=False)
+        self.object.save()
+        self.get_tasks()
+        return super().form_valid(form)
 
 
 class RadiologyAdd(PatientThingCreateMixin, generic.CreateView):

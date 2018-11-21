@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body_content %}
+
+<div class="container">
+<div class="row">
+<div class="col-md-12 main">
+
+<!-- ------------------------------------ -->
+  <div class="row">
+   <a href="{%url 'tasks:task_add' %}">
+        <button class="btn btn btn-sm pull-right" type="button">
+            <span class="glyphicon glyphicon-plus"></span> Add Task
+        </button>
+    </a>
+    </div>
+<!-- ------------------------------------- -->
+
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Due Date</th>
+        <th>Patient</th>
+        <th>Description</th>
+        <th>comment</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {%for task in tasks %}
+      <tr>
+        <td>{{task.due_date}}</td>
+        <td>
+          {%if task.patient %}
+          <a href="{%url 'emr:patient_detail' task.patient.id %}">{{task.patient}}</a>
+          {%endif%}
+        </td>
+        <td>{{task.description}}</td>
+        <td>
+          {%if task.comments %}
+            {{task.comments | safe}}
+          {%else %}
+          <a href="{%url 'tasks:task_comment' task.id %}">
+          <span class="glyphicon glyphicon-comment"></span>
+          </a>
+          {%endif%}
+        </td>
+        <td>
+          {%if task.done %}
+            DONE
+          {%else %}
+          <a href="{%url 'tasks:task_done' task.id %}">
+          <span class="glyphicon glyphicon-ok"></span>
+          </a>
+          {%endif%}
+        </td>
+        <td>
+          <a href="{%url 'tasks:task_edit' task.id %}">
+          <span class="glyphicon glyphicon-edit"></span>
+          </a>
+        </td>
+      </tr>
+      {%endfor%}
+
+    </tbody>
+  </table>
+</div>
+</div>
+</div>
+{% endblock %}

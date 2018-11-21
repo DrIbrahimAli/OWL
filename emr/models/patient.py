@@ -85,7 +85,7 @@ class Note(NoteMethods, models.Model):
     sofa_score = models.PositiveSmallIntegerField(null=True, blank=True)
     status = RichTextField()
     plan = RichTextField()
-    events = RichTextField()
+    events = RichTextField(default='YOU WILL HAVE TO FILL THIS LATER!!!')
 
     class Meta:
         ordering=['-date','-admission']

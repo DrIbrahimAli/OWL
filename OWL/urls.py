@@ -26,4 +26,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('about/', About.as_view(), name='about'),
     path('emr/',include('emr.urls')),
+    path('tasks/',include('tasks.urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

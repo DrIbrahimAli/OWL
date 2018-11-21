@@ -1,6 +1,6 @@
 from django import forms
 from django.core.exceptions import ValidationError
-from django.contrib.admin.widgets import AdminDateWidget, AdminTimeWidget, AdminSplitDateTime
+from django.contrib.admin.widgets import AdminDateWidget, AdminSplitDateTime
 from ckeditor.widgets import CKEditorWidget
 from .models.patient import *
 from .models.physician import *
