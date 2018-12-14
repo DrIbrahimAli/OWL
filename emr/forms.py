@@ -169,7 +169,7 @@ class Fluid_analysisForm(PatientThingFormMixin):
 
 class RoutineLabForm(forms.Form):
 
-    time = forms.DateTimeField(widget=AdminSplitDateTime)
+    time = forms.SplitDateTimeField(widget=AdminSplitDateTime)
 
     urea = forms.DecimalField(max_digits=7, decimal_places=2,required=False)
     # BUN = forms.DecimalField(max_digits=7, decimal_places=2,required=False)
